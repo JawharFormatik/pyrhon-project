@@ -575,6 +575,7 @@ color: rgb(0, 170, 127);</string>
       <string>Mise a jour</string>
      </property>
      <addaction name="actionAjouter_un_nouvel_Livre"/>
+     <addaction name="actionSupprimer"/>
      <addaction name="actionModifier_nombre_d_exemplaires_d_un_Livre"/>
     </widget>
     <widget class="QMenu" name="menuRecherche_et_Affichage_2">
@@ -583,9 +584,6 @@ color: rgb(0, 170, 127);</string>
      </property>
      <addaction name="actionContenue_du_dictionnaire_livre"/>
      <addaction name="actionRecherche_par_Referance"/>
-     <addaction name="actionRecherche_par_titre"/>
-     <addaction name="actionRecherche_par_annee_edition_donne"/>
-     <addaction name="actionRecherche_et_Affichage_des_livres_par_ordre_alphabetique"/>
     </widget>
     <addaction name="menuMise_a_jour"/>
     <addaction name="menuRecherche_et_Affichage_2"/>
@@ -739,12 +737,12 @@ color: rgb(0, 170, 127);</string>
   </action>
   <action name="actionContenue_du_dictionnaire_livre">
    <property name="text">
-    <string>Contenue du dictionnaire livre</string>
+    <string>Afficher les Livres</string>
    </property>
   </action>
   <action name="actionRecherche_par_Referance">
    <property name="text">
-    <string>Recherche par Referance </string>
+    <string>Recherche</string>
    </property>
   </action>
   <action name="actionRecherche_par_titre">
@@ -875,6 +873,11 @@ color: rgb(0, 170, 127);</string>
   <action name="actionRecuperer_Ficher_Emprunt">
    <property name="text">
     <string>Recuperer Ficher Emprunt</string>
+   </property>
+  </action>
+  <action name="actionSupprimer">
+   <property name="text">
+    <string>Supprimer</string>
    </property>
   </action>
  </widget>

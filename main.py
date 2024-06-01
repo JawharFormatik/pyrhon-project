@@ -16,20 +16,21 @@ class MainUi(QMainWindow):
         self.actionSupprimer_Etudiant.triggered.connect(self.supp_etud)
         self.actionModifier_Etudiant.triggered.connect(self.Modifier_etud)
         self.actionContenue_du_dictionnaire_Etudiant.triggered.connect(self.Afficher_etud)
+        self.actionRecherche.triggered.connect(self.rech_etud)
         self.actionRecherche_par_Referance.triggered.connect(self.rech_liv)
         self.actionAjouter_un_nouvel_Livre.triggered.connect(self.ajouter_liv_screen)
         self.actionSupprimer_un_Livre.triggered.connect(self.supp_liv) 
         self.actionContenue_du_dictionnaire_livre.triggered.connect(self.Afficher_liv)
         self.actionModifier_nombre_d_exemplaires_d_un_Livre.triggered.connect(self.Modifier_liv)
-        self.actionRecherche_par_numero_inscription.triggered.connect(self.rech_etud)
+        
         
     def ajouter_liv_screen(self):
         Ajouter_liv = Ajouter_livre()
         widget.addWidget(Ajouter_liv)
         widget.setCurrentIndex(widget.currentIndex()+1)
     def Modifier_liv(self):
-            Modifier_liv = Modifier_livre()
-            widget.addWidget(Modifier_liv)
+            modifier_liv = Modifier_livre()
+            widget.addWidget(modifier_liv)
             widget.setCurrentIndex(widget.currentIndex()+1)    
     def Afficher_liv(self):    
         afficher_liv = Afficher_livre()
@@ -39,7 +40,10 @@ class MainUi(QMainWindow):
         Supprimer_liv = Supprimer_livre()
         widget.addWidget(Supprimer_liv)
         widget.setCurrentIndex(widget.currentIndex()+1)
-         
+    def rech_liv(self):
+        rech = recherche_livre()
+        widget.addWidget(rech)
+        widget.setCurrentIndex(widget.currentIndex()+1)       
     def ajouter_etud_screen(self):
         Ajouter_etudient = Ajouter_etud()
         widget.addWidget(Ajouter_etudient)
@@ -60,10 +64,7 @@ class MainUi(QMainWindow):
         rech = recherche_etud()
         widget.addWidget(rech)
         widget.setCurrentIndex(widget.currentIndex()+1)    
-    def rech_liv(self):
-        rech = recherche_livre()
-        widget.addWidget(rech)
-        widget.setCurrentIndex(widget.currentIndex()+1)     
+       
     def Afficher_etud(self):    
         afficher_etudiante = Afficher_etudiants()
         widget.addWidget(afficher_etudiante)
@@ -79,17 +80,41 @@ class Ajouter_etud(QMainWindow):
         self.actionSupprimer_Etudiant.triggered.connect(self.supp_etud)  
         self.actionModifier_Etudiant.triggered.connect(self.Modifier_etud) 
         self.actionContenue_du_dictionnaire_Etudiant.triggered.connect(self.Afficher_etud)
+        self.actionRecherche_par_numero_inscription.triggered.connect(self.rech_etud)
+        self.actionRecherche_par_Referance.triggered.connect(self.rech_liv)
+        self.actionAjouter_un_nouvel_Livre.triggered.connect(self.ajouter_liv_screen)
+        self.actionSupprimer.triggered.connect(self.supp_liv) 
+        self.actionContenue_du_dictionnaire_livre.triggered.connect(self.Afficher_liv)
+        self.actionModifier_nombre_d_exemplaires_d_un_Livre.triggered.connect(self.Modifier_liv)
         self.pushButton.clicked.connect(self.send)   
-        self.actionRecherche.triggered.connect(self.rech)
         
-       
-   
+        
+    def rech_liv(self):
+        rech = recherche_livre()
+        widget.addWidget(rech)
+        widget.setCurrentIndex(widget.currentIndex()+1)  
+    def ajouter_liv_screen(self):
+        Ajouter_liv = Ajouter_livre()
+        widget.addWidget(Ajouter_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def Modifier_liv(self):
+            modifier_liv = Modifier_livre()
+            widget.addWidget(modifier_liv)
+            widget.setCurrentIndex(widget.currentIndex()+1)    
+    def Afficher_liv(self):    
+        afficher_liv = Afficher_livre()
+        widget.addWidget(afficher_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)    
+    def supp_liv(self):
+        Supprimer_liv = Supprimer_livre()
+        widget.addWidget(Supprimer_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)
     def supp_etud(self):
         Supprimer_etudiant = Supprimer_etud()
         widget.addWidget(Supprimer_etudiant)
         widget.setCurrentIndex(widget.currentIndex()+1)
         self.statusbar.showMessage("suppresion eleve") 
-    def rech(self):
+    def rech_etud(self):
         Rech = recherche_etud()
         widget.addWidget(Rech)
         widget.setCurrentIndex(widget.currentIndex()+1)    
@@ -204,7 +229,33 @@ class Supprimer_etud(QMainWindow):
         self.pushButton_2.clicked.connect(self.supprimer_sec)
         self.pushButton_3.clicked.connect(self.supprimer_niv)
         self.pushButton_4.clicked.connect(self.supprimer_niv_sec)
-        self.actionRecherche_par_numero_inscription.triggered.connect(self.rech)
+        self.actionRecherche_par_numero_inscription.triggered.connect(self.rech_etud)
+        self.actionRecherche_par_Referance.triggered.connect(self.rech_liv)
+        self.actionAjouter_un_nouvel_Livre.triggered.connect(self.ajouter_liv_screen)
+        self.actionSupprimer.triggered.connect(self.supp_liv) 
+        self.actionContenue_du_dictionnaire_livre.triggered.connect(self.Afficher_liv)
+        self.actionModifier_nombre_d_exemplaires_d_un_Livre.triggered.connect(self.Modifier_liv)
+
+    def rech_liv(self):
+        rech = recherche_livre()
+        widget.addWidget(rech)
+        widget.setCurrentIndex(widget.currentIndex()+1)  
+    def ajouter_liv_screen(self):
+        Ajouter_liv = Ajouter_livre()
+        widget.addWidget(Ajouter_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def Modifier_liv(self):
+            modifier_liv = Modifier_livre()
+            widget.addWidget(modifier_liv)
+            widget.setCurrentIndex(widget.currentIndex()+1)    
+    def Afficher_liv(self):    
+        afficher_liv = Afficher_livre()
+        widget.addWidget(afficher_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)    
+    def supp_liv(self):
+        Supprimer_liv = Supprimer_livre()
+        widget.addWidget(Supprimer_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)
     def ajouter_etud_screen(self):
         Ajouter_etudient = Ajouter_etud()
         widget.addWidget(Ajouter_etudient)
@@ -214,7 +265,7 @@ class Supprimer_etud(QMainWindow):
         Modifier_etudiante = Modifier_etudiant()
         widget.addWidget(Modifier_etudiante)
         widget.setCurrentIndex(widget.currentIndex()+1) 
-    def rech(self):
+    def rech_etud(self):
         Rech = recherche_etud()
         widget.addWidget(Rech)
         widget.setCurrentIndex(widget.currentIndex()+1)     
@@ -308,7 +359,32 @@ class Modifier_etudiant(QMainWindow):
         self.pushButton.clicked.connect(self.modifier_tel)
         self.pushButton_2.clicked.connect(self.modifier_mail)
         self.pushButton_3.clicked.connect(self.modifier_adress)
-       
+        self.actionRecherche_par_numero_inscription.triggered.connect(self.rech_etud)
+        self.actionRecherche.triggered.connect(self.rech_liv)
+        self.actionAjouter_un_nouvel_Livre.triggered.connect(self.ajouter_liv_screen)
+        self.actionSupprimer.triggered.connect(self.supp_liv) 
+        self.actionContenue_du_dictionnaire_livre.triggered.connect(self.Afficher_liv)
+        self.actionModifier_nombre_d_exemplaires_d_un_Livre.triggered.connect(self.Modifier_liv)
+    def rech_liv(self):
+        rech = recherche_livre()
+        widget.addWidget(rech)
+        widget.setCurrentIndex(widget.currentIndex()+1)  
+    def ajouter_liv_screen(self):
+        Ajouter_liv = Ajouter_livre()
+        widget.addWidget(Ajouter_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def Modifier_liv(self):
+            modifier_liv = Modifier_livre()
+            widget.addWidget(modifier_liv)
+            widget.setCurrentIndex(widget.currentIndex()+1)    
+    def Afficher_liv(self):    
+        afficher_liv = Afficher_livre()
+        widget.addWidget(afficher_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)    
+    def supp_liv(self):
+        Supprimer_liv = Supprimer_livre()
+        widget.addWidget(Supprimer_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)  
     def ajouter_etud_screen(self):
         Ajouter_etudient = Ajouter_etud()
         widget.addWidget(Ajouter_etudient)
@@ -323,7 +399,7 @@ class Modifier_etudiant(QMainWindow):
         widget.addWidget(Supprimer_etudiant)
         widget.setCurrentIndex(widget.currentIndex()+1)
         self.statusbar.showMessage("suppresion eleve")
-    def rech(self):
+    def rech_etud(self):
         rech = recherche_etud()
         widget.addWidget(rech)
         widget.setCurrentIndex(widget.currentIndex()+1)     
@@ -394,7 +470,7 @@ class Modifier_etudiant(QMainWindow):
 class recherche_etud(QMainWindow):
     def __init__(self):
         super(recherche_etud,self).__init__()
-        loadUi("ui\Recherche.ui",self)
+        loadUi("ui\Recherche_etud.ui",self)
         self.actionAjouter_Etudiant.triggered.connect(self.ajouter_etud_screen)
         self.actionSupprimer_Etudiant.triggered.connect(self.supp_etud) 
         self.actionModifier_Etudiant.triggered.connect(self.Modifier_etud)
@@ -407,6 +483,32 @@ class recherche_etud(QMainWindow):
         self.pushButton.clicked.connect(self.load_Tel)
         self.pushButton_7.clicked.connect(self.load_Mail)
         self.pushButton_8.clicked.connect(self.load_Adress)
+        self.actionRecherche.triggered.connect(self.rech_liv)
+        self.actionAjouter_un_nouvel_Livre.triggered.connect(self.ajouter_liv_screen)
+        self.actionSupprimer.triggered.connect(self.supp_liv) 
+        self.actionContenue_du_dictionnaire_livre.triggered.connect(self.Afficher_liv)
+        self.actionRecherche_par_Referance.triggered.connect(self.rech_liv)
+        self.actionModifier_nombre_d_exemplaires_d_un_Livre.triggered.connect(self.Modifier_liv)
+    def rech_liv(self):
+        rech = recherche_livre()
+        widget.addWidget(rech)
+        widget.setCurrentIndex(widget.currentIndex()+1)  
+    def ajouter_liv_screen(self):
+        Ajouter_liv = Ajouter_livre()
+        widget.addWidget(Ajouter_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def Modifier_liv(self):
+            modifier_liv = Modifier_livre()
+            widget.addWidget(modifier_liv)
+            widget.setCurrentIndex(widget.currentIndex()+1)    
+    def Afficher_liv(self):    
+        afficher_liv = Afficher_livre()
+        widget.addWidget(afficher_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)    
+    def supp_liv(self):
+        Supprimer_liv = Supprimer_livre()
+        widget.addWidget(Supprimer_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)
     def ajouter_etud_screen(self):
         Ajouter_etudient = Ajouter_etud()
         widget.addWidget(Ajouter_etudient)
@@ -636,12 +738,13 @@ class Afficher_etudiants(QMainWindow):
         self.actionAjouter_Etudiant.triggered.connect(self.ajouter_etud_screen)
         self.actionSupprimer_Etudiant.triggered.connect(self.supp_etud)
         self.actionModifier_Etudiant.triggered.connect(self.Modifier_etud)
+        self.actionRecherche_par_numero_inscription.triggered.connect(self.rech_etud)
         self.actionRecherche_par_Referance.triggered.connect(self.rech_liv)
         self.actionAjouter_un_nouvel_Livre.triggered.connect(self.ajouter_liv_screen)
         self.actionSupprimer.triggered.connect(self.supp_liv) 
         self.actionContenue_du_dictionnaire_livre.triggered.connect(self.Afficher_liv)
         self.actionModifier_nombre_d_exemplaires_d_un_Livre.triggered.connect(self.Modifier_liv)
-        self.actionRecherche_par_numero_inscription.triggered.connect(self.rech_etud)
+        
         
         self.load_data()
     def ajouter_liv_screen(self):
@@ -694,10 +797,11 @@ class Afficher_etudiants(QMainWindow):
         sheet=workbook.active
         list_value=list(sheet.values)
         row_ind=0
+        print(list_value)
         for vt in list_value[1:]:
             col_ind=0
             for v in vt:
-                print(v)
+             
 
                 self.tableWidget.setItem(row_ind,col_ind,QTableWidgetItem(str(v)))
                 col_ind+=1                         
@@ -721,7 +825,8 @@ class Ajouter_livre(QMainWindow):
         self.actionSupprimer_Etudiant.triggered.connect(self.supp_etud)
         self.actionModifier_Etudiant.triggered.connect(self.Modifier_etud)
         self.actionContenue_du_dictionnaire_Etudiant.triggered.connect(self.Afficher_etud)
-        self.actionRecherche_par_Referance.triggered.connect(self.rech)
+        self.actionRecherche.triggered.connect(self.rech_etud)
+        self.actionRecherche_par_Referance.triggered.connect(self.rech_liv)
         
        
     def ajouter_etud_screen(self):
@@ -740,10 +845,14 @@ class Ajouter_livre(QMainWindow):
         Modifier_etudiante = Modifier_etudiant()
         widget.addWidget(Modifier_etudiante)
         widget.setCurrentIndex(widget.currentIndex()+1)
-    def rech(self):
+    def rech_etud(self):
+        rech = recherche_etud()
+        widget.addWidget(rech)
+        widget.setCurrentIndex(widget.currentIndex()+1) 
+    def rech_liv(self):
         rech = recherche_livre()
         widget.addWidget(rech)
-        widget.setCurrentIndex(widget.currentIndex()+1)    
+        widget.setCurrentIndex(widget.currentIndex()+1)       
     def Afficher_etud(self):    
         afficher_etudiante = Afficher_etudiants()
         widget.addWidget(afficher_etudiante)
@@ -847,8 +956,8 @@ class Supprimer_livre(QMainWindow):
 
         super(Supprimer_livre,self).__init__()
         loadUi("ui\Supprimer_livre.ui",self)  
-        self.actionAjouter_Etudiant.triggered.connect(self.ajouter_liv_screen) 
-        self.actionModifier_Etudiant.triggered.connect(self.Modifier_liv)
+        self.actionAjouter_un_nouvel_Livre.triggered.connect(self.ajouter_liv_screen) 
+        self.actionModifier_nombre_d_exemplaires_d_un_Livre.triggered.connect(self.Modifier_liv)
         self.actionContenue_du_dictionnaire_livre.triggered.connect(self.Afficher_liv)
         self.actionAjouter_Etudiant.triggered.connect(self.ajouter_etud_screen)
         self.actionSupprimer_Etudiant.triggered.connect(self.supp_etud)
@@ -858,7 +967,8 @@ class Supprimer_livre(QMainWindow):
         self.pushButton_2.clicked.connect(self.supprimer_isbn)
         self.pushButton_3.clicked.connect(self.supprimer_titre)
         self.pushButton_4.clicked.connect(self.supprimer_auteur)
-        self.actionRecherche_par_numero_inscription.triggered.connect(self.rech)
+        self.actionRecherche_par_numero_inscription.triggered.connect(self.rech_etud)
+        self.actionRecherche_par_Referance.triggered.connect(self.rech_liv)
     def ajouter_liv_screen(self):
         Ajouter_liv = Ajouter_livre()
         widget.addWidget(Ajouter_liv)
@@ -879,7 +989,7 @@ class Supprimer_livre(QMainWindow):
         Modifier_etudiante = Modifier_etudiant()
         widget.addWidget(Modifier_etudiante)
         widget.setCurrentIndex(widget.currentIndex()+1)
-    def rech(self):
+    def rech_etud(self):
         rech = recherche_etud()
         widget.addWidget(rech)
         widget.setCurrentIndex(widget.currentIndex()+1)    
@@ -891,7 +1001,7 @@ class Supprimer_livre(QMainWindow):
         Modifier_liv = Modifier_livre()
         widget.addWidget(Modifier_liv)
         widget.setCurrentIndex(widget.currentIndex()+1) 
-    def rech(self):
+    def rech_liv(self):
         Rech = recherche_livre()
         widget.addWidget(Rech)
         widget.setCurrentIndex(widget.currentIndex()+1)     
@@ -973,15 +1083,21 @@ class Modifier_livre(QMainWindow):
     def __init__(self):
 
         super(Modifier_livre,self).__init__()
-        loadUi("ui\Modifier_etud.ui",self)   
-        self.actionAjouter_Etudiant.triggered.connect(self.ajouter_liv_screen)
-        self.actionSupprimer.triggered.connect(self.supp_liv) 
-        self.actionContenue_du_dictionnaire_livre.triggered.connect(self.Afficher_liv)
+        loadUi("ui\Modifier_nb_exmp.ui",self)   
+        
+        
         self.actionAjouter_Etudiant.triggered.connect(self.ajouter_etud_screen)
         self.actionSupprimer_Etudiant.triggered.connect(self.supp_etud)
+        self.actionRecherche_par_numero_inscription.triggered.connect(self.rech_etud)
         self.actionModifier_Etudiant.triggered.connect(self.Modifier_etud)
         self.actionContenue_du_dictionnaire_Etudiant.triggered.connect(self.Afficher_etud)
+        self.actionSupprimer.triggered.connect(self.supp_liv) 
+        self.actionRecherche_par_Referance.triggered.connect(self.rech_liv)
+        self.actionAjouter_un_nouvel_Livre.triggered.connect(self.ajouter_liv_screen)
+        self.actionContenue_du_dictionnaire_livre.triggered.connect(self.Afficher_liv)
         self.pushButton.clicked.connect(self.modifier_nb_examp)
+        
+        
       
        
     def ajouter_liv_screen(self):
@@ -998,16 +1114,16 @@ class Modifier_livre(QMainWindow):
         widget.addWidget(Supprimer_etudiant)
         widget.setCurrentIndex(widget.currentIndex()+1)
         
-    
+    def rech_etud(self):
+        rech = recherche_etud()
+        widget.addWidget(rech)
+        widget.setCurrentIndex(widget.currentIndex()+1)
 
     def Modifier_etud(self):
         Modifier_etudiante = Modifier_etudiant()
         widget.addWidget(Modifier_etudiante)
         widget.setCurrentIndex(widget.currentIndex()+1)
-    def rech(self):
-        rech = recherche_etud()
-        widget.addWidget(rech)
-        widget.setCurrentIndex(widget.currentIndex()+1)    
+       
     def Afficher_etud(self):    
         afficher_etudiante = Afficher_etudiants()
         widget.addWidget(afficher_etudiante)
@@ -1021,7 +1137,7 @@ class Modifier_livre(QMainWindow):
         widget.addWidget(Supprimer_liv)
         widget.setCurrentIndex(widget.currentIndex()+1)
  
-    def rech(self):
+    def rech_liv(self):
         rech = recherche_livre()
         widget.addWidget(rech)
         widget.setCurrentIndex(widget.currentIndex()+1)     
@@ -1055,6 +1171,7 @@ class recherche_livre(QMainWindow):
             self.actionSupprimer.triggered.connect(self.supp_liv) 
             self.actionModifier_nombre_d_exemplaires_d_un_Livre.triggered.connect(self.Modifier_liv)
             self.actionAjouter_Etudiant.triggered.connect(self.ajouter_etud_screen)
+            self.actionRecherche.triggered.connect(self.rech_etud)
             self.actionSupprimer_Etudiant.triggered.connect(self.supp_etud)
             self.actionModifier_Etudiant.triggered.connect(self.Modifier_etud)
             self.actionContenue_du_dictionnaire_Etudiant.triggered.connect(self.Afficher_etud)
@@ -1096,7 +1213,7 @@ class recherche_livre(QMainWindow):
             Modifier_etudiante = Modifier_etudiant()
             widget.addWidget(Modifier_etudiante)
             widget.setCurrentIndex(widget.currentIndex()+1)
-        def rech(self):
+        def rech_etud(self):
             rech = recherche_etud()
             widget.addWidget(rech)
             widget.setCurrentIndex(widget.currentIndex()+1)    
@@ -1104,7 +1221,7 @@ class recherche_livre(QMainWindow):
             afficher_etudiante = Afficher_etudiants()
             widget.addWidget(afficher_etudiante)
             widget.setCurrentIndex(widget.currentIndex()+1)      
-            def supp_liv(self):
+        def supp_liv(self):
                 Supprimer_liv = Supprimer_livre()
                 widget.addWidget(Supprimer_liv)
                 widget.setCurrentIndex(widget.currentIndex()+1)
@@ -1118,9 +1235,9 @@ class recherche_livre(QMainWindow):
             sheet=workbook.active
             list_value=list(sheet.values)
             row_ind=0
-            for vt in list_value[1:]:
+            for vin in list_value[1:]:
                 col_ind=0
-                for v in vt:
+                for v in vin:
                     self.tableWidget.setItem(row_ind,col_ind,QTableWidgetItem(""))
                     col_ind+=1                         
                 row_ind+=1 
@@ -1144,9 +1261,9 @@ class recherche_livre(QMainWindow):
             sheet=workbook.active
             list_value=list(sheet.values)
             row_ind=0
-            for vt in list_value[1:]:
+            for vtt in list_value[1:]:
                 col_ind=0
-                for v in vt:
+                for v in vtt:
                     self.tableWidget.setItem(row_ind,col_ind,QTableWidgetItem(""))
                     col_ind+=1                         
                 row_ind+=1 
@@ -1170,9 +1287,9 @@ class recherche_livre(QMainWindow):
             sheet=workbook.active
             list_value=list(sheet.values)
             row_ind=0
-            for vt in list_value[1:]:
+            for voo in list_value[1:]:
                 col_ind=0
-                for v in vt:
+                for v in voo:
                     self.tableWidget.setItem(row_ind,col_ind,QTableWidgetItem(""))
                     col_ind+=1                         
                 row_ind+=1 
@@ -1196,9 +1313,9 @@ class recherche_livre(QMainWindow):
             sheet=workbook.active
             list_value=list(sheet.values)
             row_ind=0
-            for vt in list_value[1:]:
+            for ut in list_value[1:]:
                 col_ind=0
-                for v in vt:
+                for v in ut:
                     self.tableWidget.setItem(row_ind,col_ind,QTableWidgetItem(""))
                     col_ind+=1                         
                 row_ind+=1 
@@ -1221,9 +1338,9 @@ class recherche_livre(QMainWindow):
             sheet=workbook.active
             list_value=list(sheet.values)
             row_ind=0
-            for vt in list_value[1:]:
+            for oo in list_value[1:]:
                 col_ind=0
-                for v in vt:
+                for v in oo:
                     self.tableWidget.setItem(row_ind,col_ind,QTableWidgetItem(""))
                     col_ind+=1                         
                 row_ind+=1 
@@ -1236,7 +1353,7 @@ class recherche_livre(QMainWindow):
                             self.tableWidget.setItem(row_ind,col_ind,QTableWidgetItem(str(v)))
                             col_ind+=1                         
                         row_ind+=1   
-
+      
 
 
 class Afficher_livre(QMainWindow):
@@ -1248,10 +1365,10 @@ class Afficher_livre(QMainWindow):
         self.actionModifier_Etudiant.triggered.connect(self.Modifier_etud)
         self.actionAjouter_un_nouvel_Livre.triggered.connect(self.ajouter_liv_screen)
         self.actionRecherche_par_Referance.triggered.connect(self.rech_liv)
+        self.actionContenue_du_dictionnaire_Etudiant.triggered.connect(self.Afficher_etud)
         self.actionRecherche_par_numero_inscription.triggered.connect(self.rech_etud)
         self.actionModifier_nombre_d_exemplaires_d_un_Livre.triggered.connect(self.Modifier_liv)
         self.actionSupprimer.triggered.connect(self.supp_liv) 
-        
         self.load_data()
 
     def ajouter_liv_screen(self):
@@ -1283,7 +1400,10 @@ class Afficher_livre(QMainWindow):
         widget.addWidget(Supprimer_etudiant)
         widget.setCurrentIndex(widget.currentIndex()+1)
         
-    
+    def Afficher_etud(self):    
+            afficher_etudiante = Afficher_etudiants()
+            widget.addWidget(afficher_etudiante)
+            widget.setCurrentIndex(widget.currentIndex()+1) 
 
     def Modifier_etud(self):
         Modifier_etudiante = Modifier_etudiant()
@@ -1303,11 +1423,10 @@ class Afficher_livre(QMainWindow):
         sheet=workbook.active
         list_value=list(sheet.values)
         row_ind=0
-        for vt in list_value[1:]:
+        for t in list_value[:]:
             col_ind=0
-            for v in vt:
+            for v in t:
                 print(v)
-
                 self.tableWidget.setItem(row_ind,col_ind,QTableWidgetItem(str(v)))
                 col_ind+=1                         
             row_ind+=1 

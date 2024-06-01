@@ -17,8 +17,8 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QLineEdit,
-    QMainWindow, QMenu, QMenuBar, QSizePolicy,
-    QStatusBar, QWidget)
+    QMainWindow, QMenu, QMenuBar, QPushButton,
+    QSizePolicy, QStatusBar, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -120,6 +120,8 @@ class Ui_MainWindow(object):
         self.actionRecuperer_Ficher_Livres.setObjectName(u"actionRecuperer_Ficher_Livres")
         self.actionRecuperer_Ficher_Emprunt = QAction(MainWindow)
         self.actionRecuperer_Ficher_Emprunt.setObjectName(u"actionRecuperer_Ficher_Emprunt")
+        self.actionSupprimer = QAction(MainWindow)
+        self.actionSupprimer.setObjectName(u"actionSupprimer")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.frame = QFrame(self.centralwidget)
@@ -148,6 +150,9 @@ class Ui_MainWindow(object):
         self.label_3 = QLabel(self.frame)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setGeometry(QRect(330, 270, 261, 81))
+        self.pushButton = QPushButton(self.frame)
+        self.pushButton.setObjectName(u"pushButton")
+        self.pushButton.setGeometry(QRect(510, 410, 93, 28))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
@@ -164,8 +169,6 @@ class Ui_MainWindow(object):
         self.menuMenu_Gestion_Des_Livres.setObjectName(u"menuMenu_Gestion_Des_Livres")
         self.menuMise_a_jour = QMenu(self.menuMenu_Gestion_Des_Livres)
         self.menuMise_a_jour.setObjectName(u"menuMise_a_jour")
-        self.menuSupprimer = QMenu(self.menuMise_a_jour)
-        self.menuSupprimer.setObjectName(u"menuSupprimer")
         self.menuRecherche_et_Affichage_2 = QMenu(self.menuMenu_Gestion_Des_Livres)
         self.menuRecherche_et_Affichage_2.setObjectName(u"menuRecherche_et_Affichage_2")
         self.menuGestion_Emprunts = QMenu(self.menubar)
@@ -202,7 +205,7 @@ class Ui_MainWindow(object):
         self.menuMenu_Gestion_Des_Livres.addAction(self.menuMise_a_jour.menuAction())
         self.menuMenu_Gestion_Des_Livres.addAction(self.menuRecherche_et_Affichage_2.menuAction())
         self.menuMise_a_jour.addAction(self.actionAjouter_un_nouvel_Livre)
-        self.menuMise_a_jour.addAction(self.menuSupprimer.menuAction())
+        self.menuMise_a_jour.addAction(self.actionSupprimer)
         self.menuMise_a_jour.addAction(self.actionModifier_nombre_d_exemplaires_d_un_Livre)
         self.menuRecherche_et_Affichage_2.addAction(self.actionContenue_du_dictionnaire_livre)
         self.menuRecherche_et_Affichage_2.addAction(self.actionRecherche_par_Referance)
@@ -273,17 +276,18 @@ class Ui_MainWindow(object):
         self.actionRecuperer_Ficher_Etudiant.setText(QCoreApplication.translate("MainWindow", u"Recuperer Ficher Etudiant", None))
         self.actionRecuperer_Ficher_Livres.setText(QCoreApplication.translate("MainWindow", u"Recuperer Ficher Livres", None))
         self.actionRecuperer_Ficher_Emprunt.setText(QCoreApplication.translate("MainWindow", u"Recuperer Ficher Emprunt", None))
+        self.actionSupprimer.setText(QCoreApplication.translate("MainWindow", u"Supprimer", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Modifier Nombre D examplaire d un Livre", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Examplaire :", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Referance Livre :", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Nombre d examplaire :", None))
+        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Modifier", None))
         self.menuAcceuil.setTitle(QCoreApplication.translate("MainWindow", u"Acceuil", None))
         self.menuMenu_Etudiant.setTitle(QCoreApplication.translate("MainWindow", u"Menu Etudiant ", None))
         self.menuMise_a_jour_Etudiant.setTitle(QCoreApplication.translate("MainWindow", u"Mise a jour Etudiant", None))
         self.menuRecherche_et_Affichage.setTitle(QCoreApplication.translate("MainWindow", u"Recherche et Affichage", None))
         self.menuMenu_Gestion_Des_Livres.setTitle(QCoreApplication.translate("MainWindow", u"Menu Gestion Des Livres", None))
         self.menuMise_a_jour.setTitle(QCoreApplication.translate("MainWindow", u"Mise a jour", None))
-        self.menuSupprimer.setTitle(QCoreApplication.translate("MainWindow", u"Supprimer", None))
         self.menuRecherche_et_Affichage_2.setTitle(QCoreApplication.translate("MainWindow", u"Recherche et Affichage", None))
         self.menuGestion_Emprunts.setTitle(QCoreApplication.translate("MainWindow", u"Gestion Emprunts", None))
         self.menuMise_a_jour_2.setTitle(QCoreApplication.translate("MainWindow", u"Mise a jour", None))

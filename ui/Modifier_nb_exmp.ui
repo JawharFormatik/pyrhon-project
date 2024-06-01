@@ -116,6 +116,19 @@ color:rgb(101, 30, 62);</string>
       <string>Nombre d examplaire :</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>410</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Modifier</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -166,13 +179,8 @@ color:rgb(101, 30, 62);</string>
      <property name="title">
       <string>Mise a jour</string>
      </property>
-     <widget class="QMenu" name="menuSupprimer">
-      <property name="title">
-       <string>Supprimer</string>
-      </property>
-     </widget>
      <addaction name="actionAjouter_un_nouvel_Livre"/>
-     <addaction name="menuSupprimer"/>
+     <addaction name="actionSupprimer"/>
      <addaction name="actionModifier_nombre_d_exemplaires_d_un_Livre"/>
     </widget>
     <widget class="QMenu" name="menuRecherche_et_Affichage_2">
@@ -453,6 +461,11 @@ color:rgb(101, 30, 62);</string>
   <action name="actionRecuperer_Ficher_Emprunt">
    <property name="text">
     <string>Recuperer Ficher Emprunt</string>
+   </property>
+  </action>
+  <action name="actionSupprimer">
+   <property name="text">
+    <string>Supprimer</string>
    </property>
   </action>
  </widget>

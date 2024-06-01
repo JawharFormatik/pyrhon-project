@@ -437,13 +437,8 @@ color:rgb(101, 30, 62);</string>
      <property name="title">
       <string>Mise a jour</string>
      </property>
-     <widget class="QMenu" name="menuSupprimer">
-      <property name="title">
-       <string>Supprimer</string>
-      </property>
-     </widget>
      <addaction name="actionAjouter_un_nouvel_Livre"/>
-     <addaction name="menuSupprimer"/>
+     <addaction name="actionSupprimer"/>
      <addaction name="actionModifier_nombre_d_exemplaires_d_un_Livre"/>
     </widget>
     <widget class="QMenu" name="menuRecherche_et_Affichage_2">
@@ -729,6 +724,11 @@ color:rgb(101, 30, 62);</string>
   <action name="actionRecherche">
    <property name="text">
     <string>Recherche</string>
+   </property>
+  </action>
+  <action name="actionSupprimer">
+   <property name="text">
+    <string>Supprimer</string>
    </property>
   </action>
  </widget>

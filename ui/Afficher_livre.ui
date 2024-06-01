@@ -250,7 +250,7 @@ background-color:rgb(255, 255, 255);
   </action>
   <action name="actionContenue_du_dictionnaire_livre">
    <property name="text">
-    <string>Contenue du dictionnaire livre</string>
+    <string>Afficher les livres</string>
    </property>
   </action>
   <action name="actionRecherche_par_Referance">
