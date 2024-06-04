@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>895</width>
-    <height>592</height>
+    <width>1251</width>
+    <height>594</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,28 +22,276 @@ background-color:rgb(255, 255, 255);
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableWidget" name="tableWidget">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>40</y>
-      <width>851</width>
-      <height>501</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>10</y>
-      <width>131</width>
-      <height>21</height>
+      <x>30</x>
+      <y>-30</y>
+      <width>161</width>
+      <height>141</height>
      </rect>
     </property>
     <property name="text">
-     <string>Liste de Livres</string>
+     <string>Recherhce par :</string>
     </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>70</y>
+      <width>681</width>
+      <height>461</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>531</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="toolTipDuration">
+     <number>0</number>
+    </property>
+    <property name="currentIndex">
+     <number>3</number>
+    </property>
+    <widget class="QWidget" name="Referance">
+     <attribute name="title">
+      <string>Referance</string>
+     </attribute>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>50</y>
+        <width>171</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 87 12pt &quot;Verdana Pro Cond Black&quot;;
+color: rgb(0, 170, 127);</string>
+      </property>
+      <property name="text">
+       <string>Referance</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>300</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Recherche</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>190</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>150</y>
+        <width>261</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Referance :</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Titre">
+     <attribute name="title">
+      <string>N° Etudiant</string>
+     </attribute>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>30</y>
+        <width>171</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 87 12pt &quot;Verdana Pro Cond Black&quot;;
+color: rgb(0, 170, 127);</string>
+      </property>
+      <property name="text">
+       <string>N°Etudiant</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>140</y>
+        <width>261</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>N°Etudiant</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_3">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>180</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>300</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Recherche</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Auteur">
+     <attribute name="title">
+      <string>Date emprunt</string>
+     </attribute>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>30</y>
+        <width>171</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 87 12pt &quot;Verdana Pro Cond Black&quot;;
+color: rgb(0, 170, 127);</string>
+      </property>
+      <property name="text">
+       <string>Auteur</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>140</y>
+        <width>261</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Date Emprunt</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>280</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Recherche</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dateEdit">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>180</y>
+        <width>110</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Num_Examp">
+     <attribute name="title">
+      <string>Date retour</string>
+     </attribute>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>50</y>
+        <width>241</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 87 12pt &quot;Verdana Pro Cond Black&quot;;
+color: rgb(0, 170, 127);</string>
+      </property>
+      <property name="text">
+       <string>Date Retour</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>120</y>
+        <width>261</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Date Retour</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>270</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Recherche</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dateEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>170</y>
+        <width>110</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -51,7 +299,7 @@ background-color:rgb(255, 255, 255);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>895</width>
+     <width>1251</width>
      <height>25</height>
     </rect>
    </property>
@@ -80,7 +328,7 @@ background-color:rgb(255, 255, 255);
      </property>
      <addaction name="actionContenue_du_dictionnaire_Etudiant"/>
      <addaction name="separator"/>
-     <addaction name="actionRecherche_par_numero_inscription"/>
+     <addaction name="actionRecherche"/>
     </widget>
     <addaction name="menuMise_a_jour_Etudiant"/>
     <addaction name="separator"/>
@@ -103,7 +351,7 @@ background-color:rgb(255, 255, 255);
       <string>Recherche et Affichage</string>
      </property>
      <addaction name="actionContenue_du_dictionnaire_livre"/>
-     <addaction name="actionRecherche_par_Referance"/>
+     <addaction name="actionRecherche_2"/>
     </widget>
     <addaction name="menuMise_a_jour"/>
     <addaction name="menuRecherche_et_Affichage_2"/>
@@ -126,7 +374,7 @@ background-color:rgb(255, 255, 255);
       <string>Recherche ,Affichage</string>
      </property>
      <addaction name="actionContenu_du_dictionnaire_emprunt"/>
-     <addaction name="actionRecherche_emprunt_par_livre"/>
+     <addaction name="actionRecherche_3"/>
     </widget>
     <addaction name="menuMise_a_jour_2"/>
     <addaction name="menuRecherche_Affichage"/>
@@ -182,12 +430,12 @@ background-color:rgb(255, 255, 255);
   </action>
   <action name="actionContenue_du_dictionnaire_Etudiant">
    <property name="text">
-    <string>Afficher les Etudiants</string>
+    <string>Afficher les Etudiants </string>
    </property>
   </action>
   <action name="actionRecherche_par_numero_inscription">
    <property name="text">
-    <string>Recherche</string>
+    <string>Recherche par numero inscription</string>
    </property>
   </action>
   <action name="actionRecherche_par_section">
@@ -237,7 +485,7 @@ background-color:rgb(255, 255, 255);
   </action>
   <action name="actionRecherche_par_Referance">
    <property name="text">
-    <string>Recherche</string>
+    <string>Recherche par Referance </string>
    </property>
   </action>
   <action name="actionRecherche_par_titre">
@@ -287,7 +535,7 @@ background-color:rgb(255, 255, 255);
   </action>
   <action name="actionRecherche_emprunt_par_livre">
    <property name="text">
-    <string>Recherche emprunt </string>
+    <string>Recherche emprunt par livre</string>
    </property>
   </action>
   <action name="actionRecherche_emprunt_par_etudiant">
@@ -332,7 +580,17 @@ background-color:rgb(255, 255, 255);
   </action>
   <action name="actionRecuperation_des_donnee">
    <property name="text">
-    <string>Recuperer les donnee</string>
+    <string>Enregistrer Ficher Etudiant</string>
+   </property>
+  </action>
+  <action name="actionAcceuil">
+   <property name="text">
+    <string>Acceuil</string>
+   </property>
+  </action>
+  <action name="actionRecherche">
+   <property name="text">
+    <string>Recherche</string>
    </property>
   </action>
   <action name="actionEnregistrer_Ficher_Livres">
@@ -365,9 +623,19 @@ background-color:rgb(255, 255, 255);
     <string>Supprimer</string>
    </property>
   </action>
+  <action name="actionRecherche_2">
+   <property name="text">
+    <string>Recherche</string>
+   </property>
+  </action>
   <action name="actionModifier_emprunt">
    <property name="text">
     <string>Modifier emprunt</string>
+   </property>
+  </action>
+  <action name="actionRecherche_3">
+   <property name="text">
+    <string>Recherche</string>
    </property>
   </action>
  </widget>

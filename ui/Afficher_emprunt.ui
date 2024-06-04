@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>895</width>
-    <height>592</height>
+    <width>1236</width>
+    <height>465</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,7 +27,7 @@ background-color:rgb(255, 255, 255);
      <rect>
       <x>20</x>
       <y>40</y>
-      <width>851</width>
+      <width>1191</width>
       <height>501</height>
      </rect>
     </property>
@@ -37,12 +37,12 @@ background-color:rgb(255, 255, 255);
      <rect>
       <x>60</x>
       <y>10</y>
-      <width>131</width>
+      <width>251</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>Liste de Livres</string>
+     <string>Liste des emprunts</string>
     </property>
    </widget>
   </widget>
@@ -51,7 +51,7 @@ background-color:rgb(255, 255, 255);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>895</width>
+     <width>1236</width>
      <height>25</height>
     </rect>
    </property>
@@ -282,7 +282,7 @@ background-color:rgb(255, 255, 255);
   </action>
   <action name="actionContenu_du_dictionnaire_emprunt">
    <property name="text">
-    <string>Afficher les emprunts</string>
+    <string>Afficher les Emprunts</string>
    </property>
   </action>
   <action name="actionRecherche_emprunt_par_livre">

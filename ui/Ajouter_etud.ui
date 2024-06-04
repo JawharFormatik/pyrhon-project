@@ -490,15 +490,10 @@ color:rgb(101, 30, 62);</string>
      <property name="title">
       <string>Mise a jour</string>
      </property>
-     <widget class="QMenu" name="menuModifier_Emprunt">
-      <property name="title">
-       <string>Modifier Emprunt</string>
-      </property>
-     </widget>
      <addaction name="actionAjouter_un_nouvel_emprunt"/>
      <addaction name="actionRetour_d_un_emprunt"/>
      <addaction name="actionSupprimer_d_un_emprunt"/>
-     <addaction name="menuModifier_Emprunt"/>
+     <addaction name="actionModifier_Emprunt"/>
     </widget>
     <widget class="QMenu" name="menuRecherche_Affichage">
      <property name="title">
@@ -510,23 +505,10 @@ color:rgb(101, 30, 62);</string>
     <addaction name="menuMise_a_jour_2"/>
     <addaction name="menuRecherche_Affichage"/>
    </widget>
-   <widget class="QMenu" name="menuRecuperation">
-    <property name="title">
-     <string>Enregistrement Et Recuperation</string>
-    </property>
-    <addaction name="actionRecuperer_les_donnee"/>
-    <addaction name="actionEnregistrer_Ficher_Livres"/>
-    <addaction name="actionEnregistrer_Ficher_Emprunt"/>
-    <addaction name="separator"/>
-    <addaction name="actionRecuperer_Ficher_Etudiant"/>
-    <addaction name="actionRecuperer_Ficher_Livres"/>
-    <addaction name="actionRecuperer_Ficher_Emprunt"/>
-   </widget>
    <addaction name="menuAcceuil"/>
    <addaction name="menuMenu_Etudiant"/>
    <addaction name="menuMenu_Gestion_Des_Livres"/>
    <addaction name="menuGestion_Emprunts"/>
-   <addaction name="menuRecuperation"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionAjouter_Etudiant">
@@ -676,7 +658,7 @@ color:rgb(101, 30, 62);</string>
   </action>
   <action name="actionRecherche_emprunt_par_livre">
    <property name="text">
-    <string>Recherche emprunt par livre</string>
+    <string>Recherche</string>
    </property>
   </action>
   <action name="actionRecherche_emprunt_par_etudiant">
@@ -762,6 +744,11 @@ color:rgb(101, 30, 62);</string>
   <action name="actionSupprimer">
    <property name="text">
     <string>Supprimer</string>
+   </property>
+  </action>
+  <action name="actionModifier_Emprunt">
+   <property name="text">
+    <string>Modifier Emprunt</string>
    </property>
   </action>
  </widget>

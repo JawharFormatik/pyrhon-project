@@ -24,7 +24,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1279, 592)
+        MainWindow.resize(1236, 592)
         MainWindow.setStyleSheet(u"color :rgb(0, 0, 0);\n"
 "font: 87 9pt \"Neue Haas Grotesk Text Pro Blac\";\n"
 "background-color:rgb(255, 255, 255);\n"
@@ -122,6 +122,8 @@ class Ui_MainWindow(object):
         self.actionRecuperer_Ficher_Emprunt.setObjectName(u"actionRecuperer_Ficher_Emprunt")
         self.actionSupprimer = QAction(MainWindow)
         self.actionSupprimer.setObjectName(u"actionSupprimer")
+        self.actionModifier_emprunt = QAction(MainWindow)
+        self.actionModifier_emprunt.setObjectName(u"actionModifier_emprunt")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.tableWidget = QTableWidget(self.centralwidget)
@@ -133,7 +135,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 1279, 25))
+        self.menubar.setGeometry(QRect(0, 0, 1236, 25))
         self.menuAcceuil = QMenu(self.menubar)
         self.menuAcceuil.setObjectName(u"menuAcceuil")
         self.menuMenu_Etudiant = QMenu(self.menubar)
@@ -152,12 +154,8 @@ class Ui_MainWindow(object):
         self.menuGestion_Emprunts.setObjectName(u"menuGestion_Emprunts")
         self.menuMise_a_jour_2 = QMenu(self.menuGestion_Emprunts)
         self.menuMise_a_jour_2.setObjectName(u"menuMise_a_jour_2")
-        self.menuModifier_Emprunt = QMenu(self.menuMise_a_jour_2)
-        self.menuModifier_Emprunt.setObjectName(u"menuModifier_Emprunt")
         self.menuRecherche_Affichage = QMenu(self.menuGestion_Emprunts)
         self.menuRecherche_Affichage.setObjectName(u"menuRecherche_Affichage")
-        self.menuRecuperation = QMenu(self.menubar)
-        self.menuRecuperation.setObjectName(u"menuRecuperation")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
@@ -167,7 +165,6 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuMenu_Etudiant.menuAction())
         self.menubar.addAction(self.menuMenu_Gestion_Des_Livres.menuAction())
         self.menubar.addAction(self.menuGestion_Emprunts.menuAction())
-        self.menubar.addAction(self.menuRecuperation.menuAction())
         self.menuMenu_Etudiant.addAction(self.menuMise_a_jour_Etudiant.menuAction())
         self.menuMenu_Etudiant.addSeparator()
         self.menuMenu_Etudiant.addAction(self.menuRecherche_et_Affichage.menuAction())
@@ -191,16 +188,9 @@ class Ui_MainWindow(object):
         self.menuMise_a_jour_2.addAction(self.actionAjouter_un_nouvel_emprunt)
         self.menuMise_a_jour_2.addAction(self.actionRetour_d_un_emprunt)
         self.menuMise_a_jour_2.addAction(self.actionSupprimer_d_un_emprunt)
-        self.menuMise_a_jour_2.addAction(self.menuModifier_Emprunt.menuAction())
+        self.menuMise_a_jour_2.addAction(self.actionModifier_emprunt)
         self.menuRecherche_Affichage.addAction(self.actionContenu_du_dictionnaire_emprunt)
         self.menuRecherche_Affichage.addAction(self.actionRecherche_emprunt_par_livre)
-        self.menuRecuperation.addAction(self.actionRecuperation_des_donnee)
-        self.menuRecuperation.addAction(self.actionEnregistrer_Ficher_Livres)
-        self.menuRecuperation.addAction(self.actionEnregistrer_Ficher_Emprunt)
-        self.menuRecuperation.addSeparator()
-        self.menuRecuperation.addAction(self.actionRecuperer_Ficher_Etudiant)
-        self.menuRecuperation.addAction(self.actionRecuperer_Ficher_Livres)
-        self.menuRecuperation.addAction(self.actionRecuperer_Ficher_Emprunt)
 
         self.retranslateUi(MainWindow)
 
@@ -237,7 +227,7 @@ class Ui_MainWindow(object):
         self.actionSupprimer_d_un_emprunt.setText(QCoreApplication.translate("MainWindow", u"Supprimer d un emprunt", None))
         self.actionDate_emprunt.setText(QCoreApplication.translate("MainWindow", u"Date emprunt", None))
         self.actionDate_Retour.setText(QCoreApplication.translate("MainWindow", u"Date Retour", None))
-        self.actionContenu_du_dictionnaire_emprunt.setText(QCoreApplication.translate("MainWindow", u"Contenu du dictionnaire emprunt", None))
+        self.actionContenu_du_dictionnaire_emprunt.setText(QCoreApplication.translate("MainWindow", u"Afficher les Emprunts", None))
         self.actionRecherche_emprunt_par_livre.setText(QCoreApplication.translate("MainWindow", u"Recherche emprunt ", None))
         self.actionRecherche_emprunt_par_etudiant.setText(QCoreApplication.translate("MainWindow", u"Recherche emprunt par etudiant", None))
         self.actionRecherche_livres_empruntee_a_une_date_donnee.setText(QCoreApplication.translate("MainWindow", u"Recherche livres empruntee a une date donnee", None))
@@ -254,6 +244,7 @@ class Ui_MainWindow(object):
         self.actionRecuperer_Ficher_Livres.setText(QCoreApplication.translate("MainWindow", u"Recuperer Ficher Livres", None))
         self.actionRecuperer_Ficher_Emprunt.setText(QCoreApplication.translate("MainWindow", u"Recuperer Ficher Emprunt", None))
         self.actionSupprimer.setText(QCoreApplication.translate("MainWindow", u"Supprimer", None))
+        self.actionModifier_emprunt.setText(QCoreApplication.translate("MainWindow", u"Modifier emprunt", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Liste de Eleves", None))
         self.menuAcceuil.setTitle(QCoreApplication.translate("MainWindow", u"Acceuil", None))
         self.menuMenu_Etudiant.setTitle(QCoreApplication.translate("MainWindow", u"Menu Etudiant ", None))
@@ -264,8 +255,6 @@ class Ui_MainWindow(object):
         self.menuRecherche_et_Affichage_2.setTitle(QCoreApplication.translate("MainWindow", u"Recherche et Affichage", None))
         self.menuGestion_Emprunts.setTitle(QCoreApplication.translate("MainWindow", u"Gestion Emprunts", None))
         self.menuMise_a_jour_2.setTitle(QCoreApplication.translate("MainWindow", u"Mise a jour", None))
-        self.menuModifier_Emprunt.setTitle(QCoreApplication.translate("MainWindow", u"Modifier Emprunt", None))
         self.menuRecherche_Affichage.setTitle(QCoreApplication.translate("MainWindow", u"Recherche ,Affichage", None))
-        self.menuRecuperation.setTitle(QCoreApplication.translate("MainWindow", u"Enregistrement Et Recuperation", None))
     # retranslateUi
 

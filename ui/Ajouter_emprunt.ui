@@ -6,43 +6,234 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>895</width>
-    <height>592</height>
+    <width>1243</width>
+    <height>591</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">color :rgb(0, 0, 0);
-font: 87 9pt &quot;Neue Haas Grotesk Text Pro Blac&quot;;
+   <string notr="true">color :rgb(5, 30, 61);
 background-color:rgb(255, 255, 255);
+
+
+font: 87 9pt &quot;Neue Haas Grotesk Text Pro Blac&quot;;
+
 
 
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableWidget" name="tableWidget">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>40</y>
-      <width>851</width>
-      <height>501</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>40</x>
+      <y>50</y>
+      <width>191</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 87 10pt &quot;Neue Haas Grotesk Text Pro Blac&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string>Numero Inscription :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>80</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">collor:rgb(255, 255, 255);
+alternate-background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>120</y>
+      <width>171</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 87 10pt &quot;Neue Haas Grotesk Text Pro Blac&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Nom :</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
       <y>10</y>
-      <width>131</width>
-      <height>21</height>
+      <width>21</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 81 11pt &quot;Rockwell Extra Bold&quot;;</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>150</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>200</y>
+      <width>171</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 87 10pt &quot;Neue Haas Grotesk Text Pro Blac&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string>Prenom</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>0</y>
+      <width>171</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 87 12pt &quot;Verdana Pro Cond Black&quot;;
+color:rgb(101, 30, 62);</string>
+    </property>
+    <property name="text">
+     <string>Livre</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>60</y>
+      <width>171</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 87 10pt &quot;Neue Haas Grotesk Text Pro Blac&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Referance</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>120</y>
+      <width>171</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 87 10pt &quot;Neue Haas Grotesk Text Pro Blac&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Date Debut </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>190</y>
+      <width>171</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 87 10pt &quot;Neue Haas Grotesk Text Pro Blac&quot;;</string>
+    </property>
+    <property name="text">
+     <string>NB Jour</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_3">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>220</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_7">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>90</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_8">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>150</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_9">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>220</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>450</y>
+      <width>93</width>
+      <height>28</height>
      </rect>
     </property>
     <property name="text">
-     <string>Liste de Livres</string>
+     <string>Submit</string>
     </property>
    </widget>
   </widget>
@@ -51,7 +242,7 @@ background-color:rgb(255, 255, 255);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>895</width>
+     <width>1243</width>
      <height>25</height>
     </rect>
    </property>
@@ -80,7 +271,7 @@ background-color:rgb(255, 255, 255);
      </property>
      <addaction name="actionContenue_du_dictionnaire_Etudiant"/>
      <addaction name="separator"/>
-     <addaction name="actionRecherche_par_numero_inscription"/>
+     <addaction name="actionRecherche"/>
     </widget>
     <addaction name="menuMise_a_jour_Etudiant"/>
     <addaction name="separator"/>
@@ -119,7 +310,7 @@ background-color:rgb(255, 255, 255);
      <addaction name="actionAjouter_un_nouvel_emprunt"/>
      <addaction name="actionRetour_d_un_emprunt"/>
      <addaction name="actionSupprimer_d_un_emprunt"/>
-     <addaction name="actionModifier_emprunt"/>
+     <addaction name="actionModifier_Emprunt"/>
     </widget>
     <widget class="QMenu" name="menuRecherche_Affichage">
      <property name="title">
@@ -138,9 +329,6 @@ background-color:rgb(255, 255, 255);
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionAjouter_Etudiant">
-   <property name="checkable">
-    <bool>false</bool>
-   </property>
    <property name="text">
     <string>Ajouter Etudiant</string>
    </property>
@@ -187,7 +375,7 @@ background-color:rgb(255, 255, 255);
   </action>
   <action name="actionRecherche_par_numero_inscription">
    <property name="text">
-    <string>Recherche</string>
+    <string>Recherche par numero inscription</string>
    </property>
   </action>
   <action name="actionRecherche_par_section">
@@ -287,7 +475,7 @@ background-color:rgb(255, 255, 255);
   </action>
   <action name="actionRecherche_emprunt_par_livre">
    <property name="text">
-    <string>Recherche emprunt </string>
+    <string>Recherche</string>
    </property>
   </action>
   <action name="actionRecherche_emprunt_par_etudiant">
@@ -325,14 +513,19 @@ background-color:rgb(255, 255, 255);
     <string>Modifier Etudiant</string>
    </property>
   </action>
-  <action name="actionMenu_Acceuil">
-   <property name="text">
-    <string>Menu Acceuil</string>
-   </property>
-  </action>
-  <action name="actionRecuperation_des_donnee">
+  <action name="actionRecuperer_les_donnee">
    <property name="text">
     <string>Recuperer les donnee</string>
+   </property>
+  </action>
+  <action name="actionMenu_Aceuil">
+   <property name="text">
+    <string>Menu Aceuil</string>
+   </property>
+  </action>
+  <action name="actionRecherche">
+   <property name="text">
+    <string>Recherche</string>
    </property>
   </action>
   <action name="actionEnregistrer_Ficher_Livres">
@@ -360,14 +553,19 @@ background-color:rgb(255, 255, 255);
     <string>Recuperer Ficher Emprunt</string>
    </property>
   </action>
+  <action name="actionClear_Ficher_etudiant">
+   <property name="text">
+    <string>Clear Ficher etudiant</string>
+   </property>
+  </action>
   <action name="actionSupprimer">
    <property name="text">
     <string>Supprimer</string>
    </property>
   </action>
-  <action name="actionModifier_emprunt">
+  <action name="actionModifier_Emprunt">
    <property name="text">
-    <string>Modifier emprunt</string>
+    <string>Modifier Emprunt</string>
    </property>
   </action>
  </widget>

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Modifier_nb_exmp.ui'
+## Form generated from reading UI file 'Afficher_emprunt.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -16,15 +16,15 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QLineEdit,
-    QMainWindow, QMenu, QMenuBar, QPushButton,
-    QSizePolicy, QStatusBar, QWidget)
+from PySide6.QtWidgets import (QApplication, QHeaderView, QLabel, QMainWindow,
+    QMenu, QMenuBar, QSizePolicy, QStatusBar,
+    QTableWidget, QTableWidgetItem, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1278, 592)
+        MainWindow.resize(1236, 465)
         MainWindow.setStyleSheet(u"color :rgb(0, 0, 0);\n"
 "font: 87 9pt \"Neue Haas Grotesk Text Pro Blac\";\n"
 "background-color:rgb(255, 255, 255);\n"
@@ -122,43 +122,20 @@ class Ui_MainWindow(object):
         self.actionRecuperer_Ficher_Emprunt.setObjectName(u"actionRecuperer_Ficher_Emprunt")
         self.actionSupprimer = QAction(MainWindow)
         self.actionSupprimer.setObjectName(u"actionSupprimer")
-        self.actionModifier_Emprunt = QAction(MainWindow)
-        self.actionModifier_Emprunt.setObjectName(u"actionModifier_Emprunt")
+        self.actionModifier_emprunt = QAction(MainWindow)
+        self.actionModifier_emprunt.setObjectName(u"actionModifier_emprunt")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.frame = QFrame(self.centralwidget)
-        self.frame.setObjectName(u"frame")
-        self.frame.setGeometry(QRect(0, 0, 1201, 531))
-        self.frame.setFrameShape(QFrame.StyledPanel)
-        self.frame.setFrameShadow(QFrame.Raised)
-        self.label_2 = QLabel(self.frame)
-        self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(20, 10, 411, 16))
-        self.label_9 = QLabel(self.frame)
-        self.label_9.setObjectName(u"label_9")
-        self.label_9.setGeometry(QRect(500, 70, 171, 91))
-        self.label_9.setStyleSheet(u"font: 87 12pt \"Verdana Pro Cond Black\";\n"
-"color:rgb(101, 30, 62);")
-        self.lineEdit_3 = QLineEdit(self.frame)
-        self.lineEdit_3.setObjectName(u"lineEdit_3")
-        self.lineEdit_3.setGeometry(QRect(630, 230, 161, 31))
-        self.lineEdit_2 = QLineEdit(self.frame)
-        self.lineEdit_2.setObjectName(u"lineEdit_2")
-        self.lineEdit_2.setGeometry(QRect(630, 300, 161, 31))
-        self.label_4 = QLabel(self.frame)
-        self.label_4.setObjectName(u"label_4")
-        self.label_4.setGeometry(QRect(330, 210, 261, 81))
-        self.label_4.setStyleSheet(u"color: rgb(85, 0, 0);")
-        self.label_3 = QLabel(self.frame)
-        self.label_3.setObjectName(u"label_3")
-        self.label_3.setGeometry(QRect(330, 270, 261, 81))
-        self.pushButton = QPushButton(self.frame)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(510, 410, 93, 28))
+        self.tableWidget = QTableWidget(self.centralwidget)
+        self.tableWidget.setObjectName(u"tableWidget")
+        self.tableWidget.setGeometry(QRect(20, 40, 1191, 501))
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        self.label.setGeometry(QRect(60, 10, 251, 21))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 1278, 25))
+        self.menubar.setGeometry(QRect(0, 0, 1236, 25))
         self.menuAcceuil = QMenu(self.menubar)
         self.menuAcceuil.setObjectName(u"menuAcceuil")
         self.menuMenu_Etudiant = QMenu(self.menubar)
@@ -211,7 +188,7 @@ class Ui_MainWindow(object):
         self.menuMise_a_jour_2.addAction(self.actionAjouter_un_nouvel_emprunt)
         self.menuMise_a_jour_2.addAction(self.actionRetour_d_un_emprunt)
         self.menuMise_a_jour_2.addAction(self.actionSupprimer_d_un_emprunt)
-        self.menuMise_a_jour_2.addAction(self.actionModifier_Emprunt)
+        self.menuMise_a_jour_2.addAction(self.actionModifier_emprunt)
         self.menuRecherche_Affichage.addAction(self.actionContenu_du_dictionnaire_emprunt)
         self.menuRecherche_Affichage.addAction(self.actionRecherche_emprunt_par_livre)
 
@@ -240,8 +217,8 @@ class Ui_MainWindow(object):
         self.actionLivre_donnee.setText(QCoreApplication.translate("MainWindow", u"Livre donnee", None))
         self.actionLivres_d_un_auteur.setText(QCoreApplication.translate("MainWindow", u"Livres d un auteur", None))
         self.actionLivres_d_une_annee_donnee.setText(QCoreApplication.translate("MainWindow", u"Livres d une annee donnee", None))
-        self.actionContenue_du_dictionnaire_livre.setText(QCoreApplication.translate("MainWindow", u"Afficher Les Livres", None))
-        self.actionRecherche_par_Referance.setText(QCoreApplication.translate("MainWindow", u"Rechercher", None))
+        self.actionContenue_du_dictionnaire_livre.setText(QCoreApplication.translate("MainWindow", u"Afficher les livres", None))
+        self.actionRecherche_par_Referance.setText(QCoreApplication.translate("MainWindow", u"Recherche", None))
         self.actionRecherche_par_titre.setText(QCoreApplication.translate("MainWindow", u"Recherche par titre", None))
         self.actionRecherche_par_annee_edition_donne.setText(QCoreApplication.translate("MainWindow", u"Recherche par annee edition donne", None))
         self.actionRecherche_et_Affichage_des_livres_par_ordre_alphabetique.setText(QCoreApplication.translate("MainWindow", u"Recherche et Affichage des livres par ordre alphabetique", None))
@@ -250,8 +227,8 @@ class Ui_MainWindow(object):
         self.actionSupprimer_d_un_emprunt.setText(QCoreApplication.translate("MainWindow", u"Supprimer d un emprunt", None))
         self.actionDate_emprunt.setText(QCoreApplication.translate("MainWindow", u"Date emprunt", None))
         self.actionDate_Retour.setText(QCoreApplication.translate("MainWindow", u"Date Retour", None))
-        self.actionContenu_du_dictionnaire_emprunt.setText(QCoreApplication.translate("MainWindow", u"Afficher Les Emprunts", None))
-        self.actionRecherche_emprunt_par_livre.setText(QCoreApplication.translate("MainWindow", u"Recherche", None))
+        self.actionContenu_du_dictionnaire_emprunt.setText(QCoreApplication.translate("MainWindow", u"Afficher les Emprunts", None))
+        self.actionRecherche_emprunt_par_livre.setText(QCoreApplication.translate("MainWindow", u"Recherche emprunt ", None))
         self.actionRecherche_emprunt_par_etudiant.setText(QCoreApplication.translate("MainWindow", u"Recherche emprunt par etudiant", None))
         self.actionRecherche_livres_empruntee_a_une_date_donnee.setText(QCoreApplication.translate("MainWindow", u"Recherche livres empruntee a une date donnee", None))
         self.actionRecherche_livres_retournee_a_une_date_donne.setText(QCoreApplication.translate("MainWindow", u"Recherche livres retournee a une date donne", None))
@@ -267,12 +244,8 @@ class Ui_MainWindow(object):
         self.actionRecuperer_Ficher_Livres.setText(QCoreApplication.translate("MainWindow", u"Recuperer Ficher Livres", None))
         self.actionRecuperer_Ficher_Emprunt.setText(QCoreApplication.translate("MainWindow", u"Recuperer Ficher Emprunt", None))
         self.actionSupprimer.setText(QCoreApplication.translate("MainWindow", u"Supprimer", None))
-        self.actionModifier_Emprunt.setText(QCoreApplication.translate("MainWindow", u"Modifier Emprunt", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Modifier Nombre D examplaire d un Livre", None))
-        self.label_9.setText(QCoreApplication.translate("MainWindow", u"Examplaire :", None))
-        self.label_4.setText(QCoreApplication.translate("MainWindow", u"Referance Livre :", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Nombre d examplaire :", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Modifier", None))
+        self.actionModifier_emprunt.setText(QCoreApplication.translate("MainWindow", u"Modifier emprunt", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"Liste des emprunts", None))
         self.menuAcceuil.setTitle(QCoreApplication.translate("MainWindow", u"Acceuil", None))
         self.menuMenu_Etudiant.setTitle(QCoreApplication.translate("MainWindow", u"Menu Etudiant ", None))
         self.menuMise_a_jour_Etudiant.setTitle(QCoreApplication.translate("MainWindow", u"Mise a jour Etudiant", None))

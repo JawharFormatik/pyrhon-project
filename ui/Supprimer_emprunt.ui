@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>895</width>
+    <width>1285</width>
     <height>592</height>
    </rect>
   </property>
@@ -22,28 +22,129 @@ background-color:rgb(255, 255, 255);
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableWidget" name="tableWidget">
+   <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>40</y>
-      <width>851</width>
-      <height>501</height>
+      <x>0</x>
+      <y>0</y>
+      <width>1161</width>
+      <height>531</height>
      </rect>
     </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>10</y>
-      <width>131</width>
-      <height>21</height>
-     </rect>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
     </property>
-    <property name="text">
-     <string>Liste de Livres</string>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
     </property>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>20</y>
+       <width>271</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Suppression d une emprunt</string>
+     </property>
+    </widget>
+    <widget class="QTabWidget" name="Supprimer">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>50</y>
+       <width>921</width>
+       <height>441</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="Referance">
+      <attribute name="title">
+       <string>Referance</string>
+      </attribute>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>110</y>
+         <width>261</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>N° Emprunt</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>150</y>
+         <width>161</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>460</x>
+         <y>270</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Supprimer</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="Date">
+      <attribute name="title">
+       <string>Date</string>
+      </attribute>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>140</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Date</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>280</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Supprimer</string>
+       </property>
+      </widget>
+      <widget class="QDateEdit" name="dateEdit">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>160</y>
+         <width>110</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -51,7 +152,7 @@ background-color:rgb(255, 255, 255);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>895</width>
+     <width>1285</width>
      <height>25</height>
     </rect>
    </property>
@@ -182,7 +283,7 @@ background-color:rgb(255, 255, 255);
   </action>
   <action name="actionContenue_du_dictionnaire_Etudiant">
    <property name="text">
-    <string>Afficher les Etudiants</string>
+    <string>Afficher les Etudiant</string>
    </property>
   </action>
   <action name="actionRecherche_par_numero_inscription">
@@ -232,12 +333,12 @@ background-color:rgb(255, 255, 255);
   </action>
   <action name="actionContenue_du_dictionnaire_livre">
    <property name="text">
-    <string>Afficher les livres</string>
+    <string>Afficher les Livres</string>
    </property>
   </action>
   <action name="actionRecherche_par_Referance">
    <property name="text">
-    <string>Recherche</string>
+    <string>Rechercher</string>
    </property>
   </action>
   <action name="actionRecherche_par_titre">
@@ -282,12 +383,12 @@ background-color:rgb(255, 255, 255);
   </action>
   <action name="actionContenu_du_dictionnaire_emprunt">
    <property name="text">
-    <string>Afficher les emprunts</string>
+    <string>Afficher les Emprunts</string>
    </property>
   </action>
   <action name="actionRecherche_emprunt_par_livre">
    <property name="text">
-    <string>Recherche emprunt </string>
+    <string>Recherche</string>
    </property>
   </action>
   <action name="actionRecherche_emprunt_par_etudiant">
@@ -325,12 +426,7 @@ background-color:rgb(255, 255, 255);
     <string>Modifier Etudiant</string>
    </property>
   </action>
-  <action name="actionMenu_Acceuil">
-   <property name="text">
-    <string>Menu Acceuil</string>
-   </property>
-  </action>
-  <action name="actionRecuperation_des_donnee">
+  <action name="actionRecuperer_les_donnee">
    <property name="text">
     <string>Recuperer les donnee</string>
    </property>

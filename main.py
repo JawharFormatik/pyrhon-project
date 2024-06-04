@@ -22,12 +22,34 @@ class MainUi(QMainWindow):
         self.actionSupprimer_un_Livre.triggered.connect(self.supp_liv) 
         self.actionContenue_du_dictionnaire_livre.triggered.connect(self.Afficher_liv)
         self.actionModifier_nombre_d_exemplaires_d_un_Livre.triggered.connect(self.Modifier_liv)
+        self.actionAjouter_un_nouvel_emprunt.triggered.connect(self.ajouter_emprunt_screen)
+        self.actionRetour_d_un_emprunt.triggered.connect(self.retour_emprunt)
+        self.actionSupprimer_d_un_emprunt.triggered.connect(self.supp_emprunt)
+        self.actionModifier_Emprunt.triggered.connect(self.modif_emprunt)
+
+    def modif_emprunt(self):
+        modif= Modifier_emprunt()
+        widget.addWidget(modif)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def supp_emprunt(self):
+        supprim= Supprimer_emprunt()
+        widget.addWidget(supprim)
+        widget.setCurrentIndex(widget.currentIndex()+1)
         
-        
+
+    def retour_emprunt(self):
+        retour= Retour_emp()
+        widget.addWidget(retour)
+        widget.setCurrentIndex(widget.currentIndex()+1)    
     def ajouter_liv_screen(self):
         Ajouter_liv = Ajouter_livre()
         widget.addWidget(Ajouter_liv)
         widget.setCurrentIndex(widget.currentIndex()+1)
+    def ajouter_emprunt_screen(self):
+        Ajouter_emp = Ajouter_emprunt()
+        widget.addWidget(Ajouter_emp)
+        widget.setCurrentIndex(widget.currentIndex()+1)    
     def Modifier_liv(self):
             modifier_liv = Modifier_livre()
             widget.addWidget(modifier_liv)
@@ -71,7 +93,7 @@ class MainUi(QMainWindow):
         widget.setCurrentIndex(widget.currentIndex()+1)
 
 
-                                 #((())) Section Etudiant  (((()))) #
+                                #((())) Section Etudiant  (((()))) #                                 
 class Ajouter_etud(QMainWindow):
     def __init__(self):
 
@@ -87,8 +109,29 @@ class Ajouter_etud(QMainWindow):
         self.actionContenue_du_dictionnaire_livre.triggered.connect(self.Afficher_liv)
         self.actionModifier_nombre_d_exemplaires_d_un_Livre.triggered.connect(self.Modifier_liv)
         self.pushButton.clicked.connect(self.send)   
+        self.actionAjouter_un_nouvel_emprunt.triggered.connect(self.ajouter_emprunt_screen)
+        self.actionRetour_d_un_emprunt.triggered.connect(self.retour_emprunt)
+        self.actionSupprimer_d_un_emprunt.triggered.connect(self.supp_emprunt)
+        self.actionModifier_Emprunt.triggered.connect(self.modif_emprunt)
+
+    def modif_emprunt(self):
+        modif= Modifier_emprunt()
+        widget.addWidget(modif)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def supp_emprunt(self):
+        supp= Supprimer_emprunt()
+        widget.addWidget(supp)
+        widget.setCurrentIndex(widget.currentIndex()+1)
         
-        
+    def retour_emprunt(self):
+        retour= Retour_emp()
+        widget.addWidget(retour)
+        widget.setCurrentIndex(widget.currentIndex()+1)   
+    def ajouter_emprunt_screen(self):
+        Ajouter_emp = Ajouter_emprunt()
+        widget.addWidget(Ajouter_emp)
+        widget.setCurrentIndex(widget.currentIndex()+1)
     def rech_liv(self):
         rech = recherche_livre()
         widget.addWidget(rech)
@@ -235,7 +278,28 @@ class Supprimer_etud(QMainWindow):
         self.actionSupprimer.triggered.connect(self.supp_liv) 
         self.actionContenue_du_dictionnaire_livre.triggered.connect(self.Afficher_liv)
         self.actionModifier_nombre_d_exemplaires_d_un_Livre.triggered.connect(self.Modifier_liv)
+        self.actionAjouter_un_nouvel_emprunt.triggered.connect(self.ajouter_emprunt_screen)
+        self.actionRetour_d_un_emprunt.triggered.connect(self.retour_emprunt)
+        self.actionSupprimer_d_un_emprunt.triggered.connect(self.supp_emprunt)
+        self.actionModifier_emprunt.triggered.connect(self.modif_emprunt)
 
+    def modif_emprunt(self):
+        modif= Modifier_emprunt()
+        widget.addWidget(modif)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def supp_emprunt(self):
+        supp= Supprimer_emprunt()
+        widget.addWidget(supp)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def retour_emprunt(self):
+        retour= Retour_emp()
+        widget.addWidget(retour)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def ajouter_emprunt_screen(self):
+        Ajouter_emp = Ajouter_emprunt()
+        widget.addWidget(Ajouter_emp)
+        widget.setCurrentIndex(widget.currentIndex()+1)
     def rech_liv(self):
         rech = recherche_livre()
         widget.addWidget(rech)
@@ -365,6 +429,28 @@ class Modifier_etudiant(QMainWindow):
         self.actionSupprimer.triggered.connect(self.supp_liv) 
         self.actionContenue_du_dictionnaire_livre.triggered.connect(self.Afficher_liv)
         self.actionModifier_nombre_d_exemplaires_d_un_Livre.triggered.connect(self.Modifier_liv)
+        self.actionAjouter_un_nouvel_emprunt.triggered.connect(self.ajouter_emprunt_screen)
+        self.actionRetour_d_un_emprunt.triggered.connect(self.retour_emprunt)
+        self.actionSupprimer_d_un_emprunt.triggered.connect(self.supp_emprunt)
+        self.actionModifier_Emprunt.triggered.connect(self.modif_emprunt)
+
+    def modif_emprunt(self):
+        modif= Modifier_emprunt()
+        widget.addWidget(modif)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def supp_emprunt(self):
+        supp= Supprimer_emprunt()
+        widget.addWidget(supp)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def retour_emprunt(self):
+        retour= Retour_emp()
+        widget.addWidget(retour)
+        widget.setCurrentIndex(widget.currentIndex()+1)    
+    def ajouter_emprunt_screen(self):
+        Ajouter_emp = Ajouter_emprunt()
+        widget.addWidget(Ajouter_emp)
+        widget.setCurrentIndex(widget.currentIndex()+1)
     def rech_liv(self):
         rech = recherche_livre()
         widget.addWidget(rech)
@@ -489,6 +575,30 @@ class recherche_etud(QMainWindow):
         self.actionContenue_du_dictionnaire_livre.triggered.connect(self.Afficher_liv)
         self.actionRecherche_par_Referance.triggered.connect(self.rech_liv)
         self.actionModifier_nombre_d_exemplaires_d_un_Livre.triggered.connect(self.Modifier_liv)
+        self.actionAjouter_un_nouvel_emprunt.triggered.connect(self.ajouter_emprunt_screen)
+        self.actionRetour_d_un_emprunt.triggered.connect(self.retour_emprunt)
+        self.actionSupprimer_d_un_emprunt.triggered.connect(self.supp_emprunt)
+        self.actionModifier_Emprunt.triggered.connect(self.modif_emprunt)
+
+    def modif_emprunt(self):
+        modif= Modifier_emprunt()
+        widget.addWidget(modif)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def supp_emprunt(self):
+        supp= Supprimer_emprunt()
+        widget.addWidget(supp)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    
+    def retour_emprunt(self):
+        retour= Retour_emp()
+        widget.addWidget(retour)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def ajouter_emprunt_screen(self):
+        Ajouter_emp = Ajouter_emprunt()
+        widget.addWidget(Ajouter_emp)
+        widget.setCurrentIndex(widget.currentIndex()+1)
     def rech_liv(self):
         rech = recherche_livre()
         widget.addWidget(rech)
@@ -744,9 +854,29 @@ class Afficher_etudiants(QMainWindow):
         self.actionSupprimer.triggered.connect(self.supp_liv) 
         self.actionContenue_du_dictionnaire_livre.triggered.connect(self.Afficher_liv)
         self.actionModifier_nombre_d_exemplaires_d_un_Livre.triggered.connect(self.Modifier_liv)
-        
-        
+        self.actionAjouter_un_nouvel_emprunt.triggered.connect(self.ajouter_emprunt_screen)
+        self.actionRetour_d_un_emprunt.triggered.connect(self.retour_emprunt)
         self.load_data()
+        self.actionSupprimer_d_un_emprunt.triggered.connect(self.supp_emprunt)
+        self.actionModifier_Emprunt.triggered.connect(self.modif_emprunt)
+
+    def modif_emprunt(self):
+        modif= Modifier_emprunt()
+        widget.addWidget(modif)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def supp_emprunt(self):
+        supp= Supprimer_emprunt()
+        widget.addWidget(supp)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def retour_emprunt(self):
+        retour= Retour_emp()
+        widget.addWidget(retour)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def ajouter_emprunt_screen(self):
+        Ajouter_emp = Ajouter_emprunt()
+        widget.addWidget(Ajouter_emp)
+        widget.setCurrentIndex(widget.currentIndex()+1)
     def ajouter_liv_screen(self):
         Ajouter_liv = Ajouter_livre()
         widget.addWidget(Ajouter_liv)
@@ -809,9 +939,10 @@ class Afficher_etudiants(QMainWindow):
            
                                    
 
-                                     # (((()))) Section Livre (((()))) #
+                                     
 
 
+                    # (((()))) Section Livre (((()))) #                              
 class Ajouter_livre(QMainWindow):
     def __init__(self):
 
@@ -827,8 +958,28 @@ class Ajouter_livre(QMainWindow):
         self.actionContenue_du_dictionnaire_Etudiant.triggered.connect(self.Afficher_etud)
         self.actionRecherche.triggered.connect(self.rech_etud)
         self.actionRecherche_par_Referance.triggered.connect(self.rech_liv)
-        
-       
+        self.actionAjouter_un_nouvel_emprunt.triggered.connect(self.ajouter_emprunt_screen)
+        self.actionRetour_d_un_emprunt.triggered.connect(self.retour_emprunt)
+        self.actionSupprimer_d_un_emprunt.triggered.connect(self.supp_emprunt)
+        self.actionModifier_Emprunt.triggered.connect(self.modif_emprunt)
+
+    def modif_emprunt(self):
+        modif= Modifier_emprunt()
+        widget.addWidget(modif)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def supp_emprunt(self):
+        supp= Supprimer_emprunt()
+        widget.addWidget(supp)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def retour_emprunt(self):
+        retour= Retour_emp()
+        widget.addWidget(retour)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def ajouter_emprunt_screen(self):
+        Ajouter_emp = Ajouter_emprunt()
+        widget.addWidget(Ajouter_emp)
+        widget.setCurrentIndex(widget.currentIndex()+1)   
     def ajouter_etud_screen(self):
         Ajouter_etudient = Ajouter_etud()
         widget.addWidget(Ajouter_etudient)
@@ -969,6 +1120,28 @@ class Supprimer_livre(QMainWindow):
         self.pushButton_4.clicked.connect(self.supprimer_auteur)
         self.actionRecherche_par_numero_inscription.triggered.connect(self.rech_etud)
         self.actionRecherche_par_Referance.triggered.connect(self.rech_liv)
+        self.actionAjouter_un_nouvel_emprunt.triggered.connect(self.ajouter_emprunt_screen)
+        self.actionRetour_d_un_emprunt.triggered.connect(self.retour_emprunt)
+        self.actionSupprimer_d_un_emprunt.triggered.connect(self.supp_emprunt)
+        self.actionModifier_emprunt.triggered.connect(self.modif_emprunt)
+
+    def modif_emprunt(self):
+        modif= Modifier_emprunt()
+        widget.addWidget(modif)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def supp_emprunt(self):
+        supp= Supprimer_emprunt()
+        widget.addWidget(supp)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def retour_emprunt(self):
+        retour= Retour_emp()
+        widget.addWidget(retour)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def ajouter_emprunt_screen(self):
+        Ajouter_emp = Ajouter_emprunt()
+        widget.addWidget(Ajouter_emp)
+        widget.setCurrentIndex(widget.currentIndex()+1)
     def ajouter_liv_screen(self):
         Ajouter_liv = Ajouter_livre()
         widget.addWidget(Ajouter_liv)
@@ -1096,10 +1269,30 @@ class Modifier_livre(QMainWindow):
         self.actionAjouter_un_nouvel_Livre.triggered.connect(self.ajouter_liv_screen)
         self.actionContenue_du_dictionnaire_livre.triggered.connect(self.Afficher_liv)
         self.pushButton.clicked.connect(self.modifier_nb_examp)
+        self.actionAjouter_un_nouvel_emprunt.triggered.connect(self.ajouter_emprunt_screen)
+        self.actionRetour_d_un_emprunt.triggered.connect(self.retour_emprunt)
+        self.actionSupprimer_d_un_emprunt.triggered.connect(self.supp_emprunt)
+        self.actionModifier_Emprunt.triggered.connect(self.modif_emprunt)
+
+    def modif_emprunt(self):
+        modif= Modifier_emprunt()
+        widget.addWidget(modif)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def supp_emprunt(self):
+        supp= Supprimer_emprunt()
+        widget.addWidget(supp)
+        widget.setCurrentIndex(widget.currentIndex()+1)
         
         
-      
-       
+    def retour_emprunt(self):
+        retour= Retour_emp()
+        widget.addWidget(retour)
+        widget.setCurrentIndex(widget.currentIndex()+1) 
+    def ajouter_emprunt_screen(self):
+        Ajouter_emp = Ajouter_emprunt()
+        widget.addWidget(Ajouter_emp)
+        widget.setCurrentIndex(widget.currentIndex()+1)  
     def ajouter_liv_screen(self):
         Ajouter_liv = Ajouter_livre()
         widget.addWidget(Ajouter_liv)
@@ -1181,6 +1374,24 @@ class recherche_livre(QMainWindow):
             self.pushButton_4.clicked.connect(self.load_auteur)
             self.pushButton_5.clicked.connect(self.load_examp)
             self.pushButton.clicked.connect(self.load_isbn)
+            self.actionAjouter_un_nouvel_emprunt.triggered.connect(self.ajouter_emprunt_screen)
+            self.actionRetour_d_un_emprunt.triggered.connect(self.retour_emprunt)
+            self.actionSupprimer_d_un_emprunt.triggered.connect(self.supp_emprunt)
+            self.actionModifier_emprunt.triggered.connect(self.modif_emprunt)
+
+        def modif_emprunt(self):
+            modif= Modifier_emprunt()
+            widget.addWidget(modif)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+
+        def supp_emprunt(self):
+            supp= Supprimer_emprunt()
+            widget.addWidget(supp)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+        def retour_emprunt(self):
+            retour= Retour_emp()
+            widget.addWidget(retour)
+            widget.setCurrentIndex(widget.currentIndex()+1)
         def ajouter_liv_screen(self):
             Ajouter_liv = Ajouter_livre()
             widget.addWidget(Ajouter_liv)
@@ -1353,7 +1564,10 @@ class recherche_livre(QMainWindow):
                             self.tableWidget.setItem(row_ind,col_ind,QTableWidgetItem(str(v)))
                             col_ind+=1                         
                         row_ind+=1   
-      
+        def ajouter_emprunt_screen(self):
+            Ajouter_emp = Ajouter_emprunt()
+            widget.addWidget(Ajouter_emp)
+            widget.setCurrentIndex(widget.currentIndex()+1)
 
 
 class Afficher_livre(QMainWindow):
@@ -1369,13 +1583,34 @@ class Afficher_livre(QMainWindow):
         self.actionRecherche_par_numero_inscription.triggered.connect(self.rech_etud)
         self.actionModifier_nombre_d_exemplaires_d_un_Livre.triggered.connect(self.Modifier_liv)
         self.actionSupprimer.triggered.connect(self.supp_liv) 
+        self.actionAjouter_un_nouvel_emprunt.triggered.connect(self.ajouter_emprunt_screen)
+        self.actionRetour_d_un_emprunt.triggered.connect(self.retour_emprunt)
         self.load_data()
+        self.actionSupprimer_d_un_emprunt.triggered.connect(self.supp_emprunt)
+        self.actionModifier_emprunt.triggered.connect(self.modif_emprunt)
 
+    def modif_emprunt(self):
+        modif= Modifier_emprunt()
+        widget.addWidget(modif)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def supp_emprunt(self):
+        supp= Supprimer_emprunt()
+        widget.addWidget(supp)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def retour_emprunt(self):
+        retour= Retour_emp()
+        widget.addWidget(retour)
+        widget.setCurrentIndex(widget.currentIndex()+1)
     def ajouter_liv_screen(self):
         Ajouter_liv = Ajouter_livre()
         widget.addWidget(Ajouter_liv)
         widget.setCurrentIndex(widget.currentIndex()+1)
-         
+    def ajouter_emprunt_screen(self):
+        Ajouter_emp = Ajouter_emprunt()
+        widget.addWidget(Ajouter_emp)
+        widget.setCurrentIndex(widget.currentIndex()+1)    
     def rech_liv(self):
         rech = recherche_livre()
         widget.addWidget(rech)
@@ -1431,7 +1666,779 @@ class Afficher_livre(QMainWindow):
                 col_ind+=1                         
             row_ind+=1 
 
+                        # (((()))) Section Emprunt (((()))) #   
 
+
+class Ajouter_emprunt(QMainWindow):
+
+    def __init__(self):
+
+        super(Ajouter_emprunt,self).__init__()
+        loadUi("ui\Ajouter_emprunt.ui",self) 
+        self.actionSupprimer.triggered.connect(self.supp_liv)  
+        self.actionModifier_nombre_d_exemplaires_d_un_Livre.triggered.connect(self.Modifier_liv) 
+        self.actionContenue_du_dictionnaire_livre.triggered.connect(self.Afficher_liv)
+        self.pushButton.clicked.connect(self.send)   
+        self.actionAjouter_Etudiant.triggered.connect(self.ajouter_etud_screen)
+        self.actionSupprimer_Etudiant.triggered.connect(self.supp_etud)
+        self.actionModifier_Etudiant.triggered.connect(self.Modifier_etud)
+        self.actionContenue_du_dictionnaire_Etudiant.triggered.connect(self.Afficher_etud)
+        self.actionRecherche.triggered.connect(self.rech_etud)
+        self.actionRecherche_par_Referance.triggered.connect(self.rech_liv)
+        self.actionRetour_d_un_emprunt.triggered.connect(self.retour_emprunt)
+        self.actionSupprimer_d_un_emprunt.triggered.connect(self.supp_emprunt)
+        self.actionModifier_Emprunt.triggered.connect(self.modif_emprunt)
+
+    def modif_emprunt(self):
+        modif= Modifier_emprunt()
+        widget.addWidget(modif)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def supp_emprunt(self):
+        supp= Supprimer_emprunt()
+        widget.addWidget(supp)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+       
+    def retour_emprunt(self):
+        retour= Retour_emp()
+        widget.addWidget(retour)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def ajouter_etud_screen(self):
+        Ajouter_etudient = Ajouter_etud()
+        widget.addWidget(Ajouter_etudient)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        self.statusbar.showMessage("ajouter etud clicked")  
+    def supp_etud(self):
+        Supprimer_etudiant = Supprimer_etud()
+        widget.addWidget(Supprimer_etudiant)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    
+
+    def Modifier_etud(self):
+        Modifier_etudiante = Modifier_etudiant()
+        widget.addWidget(Modifier_etudiante)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def rech_etud(self):
+        rech = recherche_etud()
+        widget.addWidget(rech)
+        widget.setCurrentIndex(widget.currentIndex()+1) 
+    def rech_liv(self):
+        rech = recherche_livre()
+        widget.addWidget(rech)
+        widget.setCurrentIndex(widget.currentIndex()+1)       
+    def Afficher_etud(self):    
+        afficher_etudiante = Afficher_etudiants()
+        widget.addWidget(afficher_etudiante)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def supp_liv(self):
+        supprimer_livres = Supprimer_livre()
+        widget.addWidget(supprimer_livres)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        self.statusbar.showMessage("suppresion livre") 
+    def rech(self):
+        Rech = recherche_livre()
+        widget.addWidget(Rech)
+        widget.setCurrentIndex(widget.currentIndex()+1)    
+    def clear(self):
+        path="data\Books.xlsx"
+        workbook=openpyxl.load_workbook(path)
+        sheet=workbook.active
+        for row in sheet:
+            remove(sheet)
+        workbook.save(path)       
+    def Afficher_liv(self):    
+        afficher_livres = Afficher_livre()
+        widget.addWidget(afficher_livres)
+        widget.setCurrentIndex(widget.currentIndex()+1)     
+
+    def Modifier_liv(self):
+        Modifier_liv = Modifier_livre()
+        widget.addWidget(Modifier_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1) 
+    def popup_suc(self):
+        msg=QMessageBox()    
+        msg.setWindowTitle("Success")
+        msg.setText("Livre enregistree avec succes !")
+        msg.setIcon(QMessageBox.Information)
+       
+
+        x=msg.exec_()
+    def popup_erre(self):
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Critical)
+        msg.setText("errur d information !")
+        msg.setWindowTitle("ERREUR")
+        msg.setDetailedText("-Referance doit contenir 6 chiffres \n -ISBN doit etre formee par 13 chiffres\n -nombre de page doit etre numerique \n   ")
+        
+        
+
+        x=msg.exec_()    
+    def send(self):
+        tito=True
+        referance=self.lineEdit.text()
+        Titre=self.lineEdit_2.text()
+        Auteur=self.lineEdit_3.text()
+        nb_Examp=self.lineEdit_5.text()
+        nb_Pages=self.lineEdit_6.text()
+        isbn=self.lineEdit_10.text()
+        
+    
+        if(len(referance)!=6 or referance.isnumeric()==False):
+            tito=False
+           
+        if(len(isbn)!=13 or isbn.isnumeric()==False):
+            tito=False  
+          
+        if(Titre.isalpha()==False or Auteur.isalpha()==False):
+            tito=False        
+        if(nb_Examp.isnumeric()==False):
+            tito=False 
+        if(nb_Pages.isnumeric()==False):
+            tito=False          
+        print("---------------")
+        print("referance: ",referance,"|titre : ",Titre,"|Auteur:",Auteur,"ISBN :",isbn,"nb pages :",nb_Pages,
+              "nb examplaire :",nb_Examp)
+        print("---------------")
+        self.lineEdit.setText('')
+        self.lineEdit_2.setText('')
+        self.lineEdit_3.setText('')
+        self.lineEdit_5.setText('')
+        self.lineEdit_6.setText('')
+        self.lineEdit_10.setText('')
+    
+        path="data\Books.xlsx"
+        if not os.path.exists(path):
+            workbook=openpyxl.Workbook()
+            sheet=workbook.active
+            heading=["Referance","Titre","Auteur","Num Examplaire","nb Pages","ISBN"]
+            sheet.append(heading)
+            workbook.save(path)
+        if(tito==True):    
+            workbook=openpyxl.load_workbook(path)
+            sheet=workbook.active
+            sheet.append([referance,Titre,Auteur,nb_Examp,nb_Pages,isbn])   
+            self.popup_suc() 
+            self.clear()
+            workbook.save(path)  
+            
+        else:
+            print("erreur") 
+            self.popup_erre() 
+
+class Retour_emp(QMainWindow):
+
+    def __init__(self):
+
+        super(Retour_emp,self).__init__()
+        loadUi("ui\Retour_emprunt.ui",self)   
+        
+        
+        self.actionAjouter_Etudiant.triggered.connect(self.ajouter_etud_screen)
+        self.actionSupprimer_Etudiant.triggered.connect(self.supp_etud)
+        self.actionRecherche_par_numero_inscription.triggered.connect(self.rech_etud)
+        self.actionModifier_Etudiant.triggered.connect(self.Modifier_etud)
+        self.actionContenue_du_dictionnaire_Etudiant.triggered.connect(self.Afficher_etud)
+        self.actionSupprimer.triggered.connect(self.supp_liv) 
+        self.actionRecherche_par_Referance.triggered.connect(self.rech_liv)
+        self.actionAjouter_un_nouvel_Livre.triggered.connect(self.ajouter_liv_screen)
+        self.actionContenue_du_dictionnaire_livre.triggered.connect(self.Afficher_liv)
+        self.pushButton.clicked.connect(self.modifier_nb_examp)
+        self.actionAjouter_un_nouvel_emprunt.triggered.connect(self.ajouter_emprunt_screen)
+        self.actionSupprimer_d_un_emprunt.triggered.connect(self.supp_emprunt)
+        self.actionModifier_Emprunt.triggered.connect(self.modif_emprunt)
+
+    def modif_emprunt(self):
+        modif= Modifier_emprunt()
+        widget.addWidget(modif)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def supp_emprunt(self):
+        supp= Supprimer_emprunt()
+        widget.addWidget(supp)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+        
+      
+    def ajouter_emprunt_screen(self):
+        Ajouter_emp = Ajouter_emprunt()
+        widget.addWidget(Ajouter_emp)
+        widget.setCurrentIndex(widget.currentIndex()+1)  
+    def ajouter_liv_screen(self):
+        Ajouter_liv = Ajouter_livre()
+        widget.addWidget(Ajouter_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def ajouter_etud_screen(self):
+        Ajouter_etudient = Ajouter_etud()
+        widget.addWidget(Ajouter_etudient)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        self.statusbar.showMessage("ajouter etud clicked")  
+    def supp_etud(self):
+        Supprimer_etudiant = Supprimer_etud()
+        widget.addWidget(Supprimer_etudiant)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def rech_etud(self):
+        rech = recherche_etud()
+        widget.addWidget(rech)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def Modifier_etud(self):
+        Modifier_etudiante = Modifier_etudiant()
+        widget.addWidget(Modifier_etudiante)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+       
+    def Afficher_etud(self):    
+        afficher_etudiante = Afficher_etudiants()
+        widget.addWidget(afficher_etudiante)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def Afficher_liv(self):    
+        afficher_liv = Afficher_livre()
+        widget.addWidget(afficher_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)    
+    def supp_liv(self):
+        Supprimer_liv = Supprimer_livre()
+        widget.addWidget(Supprimer_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+ 
+    def rech_liv(self):
+        rech = recherche_livre()
+        widget.addWidget(rech)
+        widget.setCurrentIndex(widget.currentIndex()+1)     
+    def popup_nb_examp(self):
+        msg=QMessageBox()    
+        msg.setWindowTitle("Success")
+        msg.setText(f" Numero d examplaire  {self.lineEdit_3.text()}  a ete modifiee avec succes !")
+        msg.setIcon(QMessageBox.Information)  
+        x=msg.exec_()   
+    def modifier_nb_examp(self):
+        path="data\Books.xlsx"
+        workbook=openpyxl.load_workbook(path)
+        sheet=workbook.active
+         
+        for row in range(2,sheet.max_row):
+            if(sheet["A"+str(row)].value==self.lineEdit_3.text()):
+                sheet["D"+str(row)].value=self.lineEdit_2.text()
+                
+                print("done")
+        self.lineEdit_3.setText('')  
+        self.lineEdit_2.setText('')         
+        self.popup_md_tel() 
+        workbook.save(path) 
+
+class Supprimer_emprunt(QMainWindow):
+    def __init__(self):
+
+        super(Supprimer_emprunt,self).__init__()
+        loadUi("ui\Supprimer_emprunt.ui",self)  
+        self.actionAjouter_un_nouvel_Livre.triggered.connect(self.ajouter_liv_screen) 
+        self.actionModifier_nombre_d_exemplaires_d_un_Livre.triggered.connect(self.Modifier_liv)
+        self.actionContenue_du_dictionnaire_livre.triggered.connect(self.Afficher_liv)
+        self.actionAjouter_Etudiant.triggered.connect(self.ajouter_etud_screen)
+        self.actionSupprimer_Etudiant.triggered.connect(self.supp_etud)
+        self.actionModifier_Etudiant.triggered.connect(self.Modifier_etud)
+        self.actionContenue_du_dictionnaire_Etudiant.triggered.connect(self.Afficher_etud)
+        self.pushButton.clicked.connect(self.supprimer_ref)
+        self.actionRecherche_par_numero_inscription.triggered.connect(self.rech_etud)
+        self.actionRecherche_par_Referance.triggered.connect(self.rech_liv)
+        self.actionSupprimer.triggered.connect(self.supp_liv) 
+        self.actionAjouter_un_nouvel_emprunt.triggered.connect(self.ajouter_emprunt_screen)
+        self.actionRetour_d_un_emprunt.triggered.connect(self.retour_emprunt)
+        self.actionModifier_emprunt.triggered.connect(self.modif_emprunt)
+
+    def modif_emprunt(self):
+        modif= Modifier_emprunt()
+        widget.addWidget(modif)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+       
+    def retour_emprunt(self):
+        retour= Retour_emp()
+        widget.addWidget(retour)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def ajouter_emprunt_screen(self):
+        Ajouter_emp = Ajouter_emprunt()
+        widget.addWidget(Ajouter_emp)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def supp_liv(self):
+        supprimer_livres = Supprimer_livre()
+        widget.addWidget(supprimer_livres)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        self.statusbar.showMessage("suppresion livre") 
+    def ajouter_liv_screen(self):
+        Ajouter_liv = Ajouter_livre()
+        widget.addWidget(Ajouter_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def ajouter_etud_screen(self):
+        Ajouter_etudient = Ajouter_etud()
+        widget.addWidget(Ajouter_etudient)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        self.statusbar.showMessage("ajouter etud clicked")  
+    def supp_etud(self):
+        Supprimer_etudiant = Supprimer_etud()
+        widget.addWidget(Supprimer_etudiant)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    
+
+    def Modifier_etud(self):
+        Modifier_etudiante = Modifier_etudiant()
+        widget.addWidget(Modifier_etudiante)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def rech_etud(self):
+        rech = recherche_etud()
+        widget.addWidget(rech)
+        widget.setCurrentIndex(widget.currentIndex()+1)    
+    def Afficher_etud(self):    
+        afficher_etudiante = Afficher_etudiants()
+        widget.addWidget(afficher_etudiante)
+        widget.setCurrentIndex(widget.currentIndex()+1)    
+    def Modifier_liv(self):
+        Modifier_liv = Modifier_livre()
+        widget.addWidget(Modifier_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1) 
+    def rech_liv(self):
+        Rech = recherche_livre()
+        widget.addWidget(Rech)
+        widget.setCurrentIndex(widget.currentIndex()+1)     
+    def Afficher_liv(self):    
+        afficher_liv = Afficher_livre()
+        widget.addWidget(afficher_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)    
+    def popup_ref(self):
+        msg=QMessageBox()    
+        msg.setWindowTitle("Success")
+        msg.setText(f"livre n° {self.lineEdit.text()} a ete supprimee avec succes !")
+    
+        msg.setIcon(QMessageBox.Information)
+        x=msg.exec_()
+    def popup_isbn(self):
+        msg=QMessageBox()    
+        msg.setWindowTitle("Success")
+        msg.setText(f"ISBN {self.lineEdit_2.text()} a ete supprimee avec succes !")
+        msg.setIcon(QMessageBox.Information)
+        x=msg.exec_()
+           
+    def popup_Titre(self):
+        msg=QMessageBox()    
+        msg.setWindowTitle("Success")
+        msg.setText(f" Titre {self.lineEdit_3.text()}  a ete supprimee avec succes !")
+        msg.setIcon(QMessageBox.Information)
+        x=msg.exec_()
+    def popup_Auteur(self):
+        msg=QMessageBox()    
+        msg.setWindowTitle("Success")
+        msg.setText(f" {self.lineEdit_4.text()}  a ete supprimee avec succes !")
+        msg.setIcon(QMessageBox.Information)
+        x=msg.exec_()  
+
+    def supprimer_ref(self):
+        path="data\Books.3.xlsx"
+        workbook=openpyxl.load_workbook(path)
+        sheet=workbook.active
+        for row in range(2,sheet.max_row):
+            if(sheet["A"+str(row)].value ==self.lineEdit.text()):
+                sheet.delete_rows(row)
+                workbook.save(path) 
+                print("deleted")
+        self.lineEdit.setText('')        
+        self.popup_ref()
+
+class Modifier_emprunt(QMainWindow):
+    def __init__(self):
+
+        super(Modifier_emprunt,self).__init__()
+        loadUi("ui\Modifier_emprunt.ui",self)   
+        
+        
+        self.actionAjouter_Etudiant.triggered.connect(self.ajouter_etud_screen)
+        self.actionSupprimer_Etudiant.triggered.connect(self.supp_etud)
+        self.actionRecherche_par_numero_inscription.triggered.connect(self.rech_etud)
+        self.actionModifier_Etudiant.triggered.connect(self.Modifier_etud)
+        self.actionContenue_du_dictionnaire_Etudiant.triggered.connect(self.Afficher_etud)
+        self.actionSupprimer.triggered.connect(self.supp_liv) 
+        self.actionRecherche.triggered.connect(self.rech_liv)
+        self.actionAjouter_un_nouvel_Livre.triggered.connect(self.ajouter_liv_screen)
+        self.actionContenue_du_dictionnaire_livre.triggered.connect(self.Afficher_liv)
+        self.actionAjouter_un_nouvel_emprunt.triggered.connect(self.ajouter_emprunt_screen)
+        self.actionRetour_d_un_emprunt.triggered.connect(self.retour_emprunt)
+        self.actionSupprimer_d_un_emprunt.triggered.connect(self.supp_emprunt)
+        self.actionModifier_nombre_d_exemplaires_d_un_Livre.triggered.connect(self.Modifier_liv)
+       
+
+    def supp_emprunt(self):
+        supp= Supprimer_emprunt()
+        widget.addWidget(supp)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def Modifier_liv(self):
+        Modifier_liv = Modifier_livre()
+        widget.addWidget(Modifier_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1) 
+   
+        
+    def retour_emprunt(self):
+        retour= Retour_emp()
+        widget.addWidget(retour)
+        widget.setCurrentIndex(widget.currentIndex()+1) 
+    def ajouter_emprunt_screen(self):
+        Ajouter_emp = Ajouter_emprunt()
+        widget.addWidget(Ajouter_emp)
+        widget.setCurrentIndex(widget.currentIndex()+1)  
+    def ajouter_liv_screen(self):
+        Ajouter_liv = Ajouter_livre()
+        widget.addWidget(Ajouter_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def ajouter_etud_screen(self):
+        Ajouter_etudient = Ajouter_etud()
+        widget.addWidget(Ajouter_etudient)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        self.statusbar.showMessage("ajouter etud clicked")  
+    def supp_etud(self):
+        Supprimer_etudiant = Supprimer_etud()
+        widget.addWidget(Supprimer_etudiant)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def rech_etud(self):
+        rech = recherche_etud()
+        widget.addWidget(rech)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def Modifier_etud(self):
+        Modifier_etudiante = Modifier_etudiant()
+        widget.addWidget(Modifier_etudiante)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+       
+    def Afficher_etud(self):    
+        afficher_etudiante = Afficher_etudiants()
+        widget.addWidget(afficher_etudiante)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def Afficher_liv(self):    
+        afficher_liv = Afficher_livre()
+        widget.addWidget(afficher_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)    
+    def supp_liv(self):
+        Supprimer_liv = Supprimer_livre()
+        widget.addWidget(Supprimer_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+ 
+    def rech_liv(self):
+        rech = recherche_livre()
+        widget.addWidget(rech)
+        widget.setCurrentIndex(widget.currentIndex()+1)     
+    def popup_nb_examp(self):
+        msg=QMessageBox()    
+        msg.setWindowTitle("Success")
+        msg.setText(f" Numero d examplaire  {self.lineEdit_3.text()}  a ete modifiee avec succes !")
+        msg.setIcon(QMessageBox.Information)  
+        x=msg.exec_()   
+
+class recherche_emprunt(QMainWindow):                                                     
+        def __init__(self):
+            super(recherche_emprunt,self).__init__()
+            loadUi("ui\Recherche_emprunt.ui",self)
+            self.actionAjouter_un_nouvel_Livre.triggered.connect(self.ajouter_liv_screen)
+            self.actionSupprimer.triggered.connect(self.supp_liv) 
+            self.actionModifier_nombre_d_exemplaires_d_un_Livre.triggered.connect(self.Modifier_liv)
+            self.actionAjouter_Etudiant.triggered.connect(self.ajouter_etud_screen)
+            self.actionRecherche.triggered.connect(self.rech_etud)
+            self.actionSupprimer_Etudiant.triggered.connect(self.supp_etud)
+            self.actionModifier_Etudiant.triggered.connect(self.Modifier_etud)
+            self.actionContenue_du_dictionnaire_Etudiant.triggered.connect(self.Afficher_etud)
+            self.actionContenue_du_dictionnaire_livre.triggered.connect(self.Afficher_liv)
+            self.pushButton_2.clicked.connect(self.load_ref)
+            self.pushButton_3.clicked.connect(self.load_titre)
+            self.pushButton_4.clicked.connect(self.load_auteur)
+            self.pushButton_5.clicked.connect(self.load_examp)
+            self.pushButton.clicked.connect(self.load_isbn)
+            self.actionAjouter_un_nouvel_emprunt.triggered.connect(self.ajouter_emprunt_screen)
+            self.actionRetour_d_un_emprunt.triggered.connect(self.retour_emprunt)
+            self.actionSupprimer_d_un_emprunt.triggered.connect(self.supp_emprunt)
+            self.actionModifier_emprunt.triggered.connect(self.modif_emprunt)
+
+        def modif_emprunt(self):
+            modif= Modifier_emprunt()
+            widget.addWidget(modif)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+
+        def supp_emprunt(self):
+            supp= Supprimer_emprunt()
+            widget.addWidget(supp)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+        def retour_emprunt(self):
+            retour= Retour_emp()
+            widget.addWidget(retour)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+        def ajouter_liv_screen(self):
+            Ajouter_liv = Ajouter_livre()
+            widget.addWidget(Ajouter_liv)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+        def supp_liv(self):
+            supprimer_livres = Supprimer_livre()
+            widget.addWidget(supprimer_livres)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+            self.statusbar.showMessage("suppresion livre") 
+        def ajouter_etud_screen(self):
+            Ajouter_etudient = Ajouter_etud()
+            widget.addWidget(Ajouter_etudient)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+            self.statusbar.showMessage("ajouter etud clicked")  
+        def supp_etud(self):
+            Supprimer_etudiant = Supprimer_etud()
+            widget.addWidget(Supprimer_etudiant)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+            
+        
+        def Modifier_liv(self):
+            Modifier_liv = Modifier_livre()
+            widget.addWidget(Modifier_liv)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+        def Afficher_liv(self):    
+            afficher_liv = Afficher_livre()
+            widget.addWidget(afficher_liv)
+            widget.setCurrentIndex(widget.currentIndex()+1) 
+        def Modifier_etud(self):
+            Modifier_etudiante = Modifier_etudiant()
+            widget.addWidget(Modifier_etudiante)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+        def rech_etud(self):
+            rech = recherche_etud()
+            widget.addWidget(rech)
+            widget.setCurrentIndex(widget.currentIndex()+1)   
+        def ajouter_emprunt_screen(self):
+            Ajouter_emp = Ajouter_emprunt()
+            widget.addWidget(Ajouter_emp)
+            widget.setCurrentIndex(widget.currentIndex()+1)       
+        def Afficher_etud(self):    
+            afficher_etudiante = Afficher_etudiants()
+            widget.addWidget(afficher_etudiante)
+            widget.setCurrentIndex(widget.currentIndex()+1)      
+        def supp_liv(self):
+                Supprimer_liv = Supprimer_livre()
+                widget.addWidget(Supprimer_liv)
+                widget.setCurrentIndex(widget.currentIndex()+1)
+        def load_isbn(self):
+            isbn=self.lineEdit.text()
+            self.tableWidget.setColumnCount(9)
+            self.tableWidget.setRowCount(200)
+            self.tableWidget.setHorizontalHeaderLabels(("Referance ","Titre","Auteur","Num_Examp","Num_Page","ISBN"))
+            path="data\Books.xlsx"    
+            workbook=openpyxl.load_workbook(path)
+            sheet=workbook.active
+            list_value=list(sheet.values)
+            row_ind=0
+            for vin in list_value[1:]:
+                col_ind=0
+                for v in vin:
+                    self.tableWidget.setItem(row_ind,col_ind,QTableWidgetItem(""))
+                    col_ind+=1                         
+                row_ind+=1 
+            row_ind=0
+            for row in sheet.iter_rows(min_row=2, max_col=9, max_row=99, values_only=True):
+                for cell in row:
+                    if cell==isbn:
+                        col_ind=0
+                        for v in row:
+                            self.tableWidget.setItem(row_ind,col_ind,QTableWidgetItem(str(v)))
+                            col_ind+=1                         
+                        row_ind+=1      
+         
+        def load_ref(self):
+            ref=self.lineEdit_2.text()
+            self.tableWidget.setColumnCount(9)
+            self.tableWidget.setRowCount(200)
+            self.tableWidget.setHorizontalHeaderLabels(("Referance ","Titre","Auteur","Num_Examp","Num_Page","ISBN"))
+            path="data\Books.xlsx"    
+            workbook=openpyxl.load_workbook(path)
+            sheet=workbook.active
+            list_value=list(sheet.values)
+            row_ind=0
+            for vtt in list_value[1:]:
+                col_ind=0
+                for v in vtt:
+                    self.tableWidget.setItem(row_ind,col_ind,QTableWidgetItem(""))
+                    col_ind+=1                         
+                row_ind+=1 
+            row_ind=0
+            for row in sheet.iter_rows(min_row=2, max_col=9, max_row=99, values_only=True):
+                for cell in row:
+                    if cell==ref:
+                        col_ind=0
+                        for v in row:
+                            self.tableWidget.setItem(row_ind,col_ind,QTableWidgetItem(str(v)))
+                            col_ind+=1                         
+                        row_ind+=1  
+
+        def load_titre(self):
+            titre=self.lineEdit_3.text()
+            self.tableWidget.setColumnCount(9)
+            self.tableWidget.setRowCount(200)
+            self.tableWidget.setHorizontalHeaderLabels(("Referance ","Titre","Auteur","Num_Examp","Num_Page","ISBN"))
+            path="data\Books.xlsx"    
+            workbook=openpyxl.load_workbook(path)
+            sheet=workbook.active
+            list_value=list(sheet.values)
+            row_ind=0
+            for voo in list_value[1:]:
+                col_ind=0
+                for v in voo:
+                    self.tableWidget.setItem(row_ind,col_ind,QTableWidgetItem(""))
+                    col_ind+=1                         
+                row_ind+=1 
+            row_ind=0
+            for row in sheet.iter_rows(min_row=2, max_col=9, max_row=99, values_only=True):
+                for cell in row:
+                    if cell==titre:
+                        col_ind=0
+                        for v in row:
+                            self.tableWidget.setItem(row_ind,col_ind,QTableWidgetItem(str(v)))
+                            col_ind+=1                         
+                        row_ind+=1                                   
+         
+        def load_auteur(self):
+            auteur=self.lineEdit_4.text()
+            self.tableWidget.setColumnCount(9)
+            self.tableWidget.setRowCount(200)
+            self.tableWidget.setHorizontalHeaderLabels(("Referance ","Titre","Auteur","Num_Examp","Num_Page","ISBN"))
+            path="data\Books.xlsx"    
+            workbook=openpyxl.load_workbook(path)
+            sheet=workbook.active
+            list_value=list(sheet.values)
+            row_ind=0
+            for ut in list_value[1:]:
+                col_ind=0
+                for v in ut:
+                    self.tableWidget.setItem(row_ind,col_ind,QTableWidgetItem(""))
+                    col_ind+=1                         
+                row_ind+=1 
+            row_ind=0
+            for row in sheet.iter_rows(min_row=2, max_col=9, max_row=99, values_only=True):
+                for cell in row:
+                    if cell==auteur:
+                        col_ind=0
+                        for v in row:
+                            self.tableWidget.setItem(row_ind,col_ind,QTableWidgetItem(str(v)))
+                            col_ind+=1                         
+                        row_ind+=1     
+        def load_examp(self):
+            examp=self.lineEdit_5.text()
+            self.tableWidget.setColumnCount(9)
+            self.tableWidget.setRowCount(200)
+            self.tableWidget.setHorizontalHeaderLabels(("Referance ","Titre","Auteur","Num_Examp","Num_Page","ISBN"))
+            path="data\Books.xlsx"    
+            workbook=openpyxl.load_workbook(path)
+            sheet=workbook.active
+            list_value=list(sheet.values)
+            row_ind=0
+            for oo in list_value[1:]:
+                col_ind=0
+                for v in oo:
+                    self.tableWidget.setItem(row_ind,col_ind,QTableWidgetItem(""))
+                    col_ind+=1                         
+                row_ind+=1 
+            row_ind=0
+            for row in sheet.iter_rows(min_row=2, max_col=9, max_row=99, values_only=True):
+                for cell in row:
+                    if cell==examp:
+                        col_ind=0
+                        for v in row:
+                            self.tableWidget.setItem(row_ind,col_ind,QTableWidgetItem(str(v)))
+                            col_ind+=1                         
+                        row_ind+=1   
+class Afficher_emprunt(QMainWindow):
+    def __init__(self):
+        super(Afficher_emprunt,self).__init__()
+        loadUi("ui\Afficher_emprunt.ui",self)
+        self.actionAjouter_Etudiant.triggered.connect(self.ajouter_etud_screen)
+        self.actionSupprimer_Etudiant.triggered.connect(self.supp_etud)
+        self.actionModifier_Etudiant.triggered.connect(self.Modifier_etud)
+        self.actionRecherche_par_numero_inscription.triggered.connect(self.rech_etud)
+        self.actionRecherche_par_Referance.triggered.connect(self.rech_liv)
+        self.actionAjouter_un_nouvel_Livre.triggered.connect(self.ajouter_liv_screen)
+        self.actionSupprimer.triggered.connect(self.supp_liv) 
+        self.actionContenue_du_dictionnaire_livre.triggered.connect(self.Afficher_liv)
+        self.actionModifier_nombre_d_exemplaires_d_un_Livre.triggered.connect(self.Modifier_liv)
+        self.actionAjouter_un_nouvel_emprunt.triggered.connect(self.ajouter_emprunt_screen)
+        self.actionRetour_d_un_emprunt.triggered.connect(self.retour_emprunt)
+        self.load_data()
+        self.actionSupprimer_d_un_emprunt.triggered.connect(self.supp_emprunt)
+        self.actionModifier_Emprunt.triggered.connect(self.modif_emprunt)
+
+    def modif_emprunt(self):
+        modif= Modifier_emprunt()
+        widget.addWidget(modif)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def supp_emprunt(self):
+        supp= Supprimer_emprunt()
+        widget.addWidget(supp)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def retour_emprunt(self):
+        retour= Retour_emp()
+        widget.addWidget(retour)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def ajouter_emprunt_screen(self):
+        Ajouter_emp = Ajouter_emprunt()
+        widget.addWidget(Ajouter_emp)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def ajouter_liv_screen(self):
+        Ajouter_liv = Ajouter_livre()
+        widget.addWidget(Ajouter_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def Modifier_liv(self):
+            Modifier_liv = Modifier_livre()
+            widget.addWidget(Modifier_liv)
+            widget.setCurrentIndex(widget.currentIndex()+1)    
+    def Afficher_liv(self):    
+        afficher_liv = Afficher_livre()
+        widget.addWidget(afficher_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)    
+    def supp_liv(self):
+        Supprimer_liv = Supprimer_livre()
+        widget.addWidget(Supprimer_liv)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def rech_liv(self):
+        rech = recherche_livre()
+        widget.addWidget(rech)
+        widget.setCurrentIndex(widget.currentIndex()+1)    
+    def ajouter_etud_screen(self):
+        Ajouter_etudient = Ajouter_etud()
+        widget.addWidget(Ajouter_etudient)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+       
+    def rech_etud(self):
+        rech = recherche_etud()
+        widget.addWidget(rech)
+        widget.setCurrentIndex(widget.currentIndex()+1)        
+    
+    def supp_etud(self):
+        Supprimer_etudiant = Supprimer_etud()
+        widget.addWidget(Supprimer_etudiant)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+          
+    def Modifier_etud(self):
+        Modifier_etudiante = Modifier_etudiant()
+        widget.addWidget(Modifier_etudiante)
+        widget.setCurrentIndex(widget.currentIndex()+1)   
+   
+    
+    def load_data(self):  
+        self.tableWidget.setColumnCount(9)
+        self.tableWidget.setRowCount(200)
+        self.tableWidget.setHorizontalHeaderLabels(("N° Inscri ","Nom","Prenom","Date Naissance","Mail","Telephone","Adresse","Niveau d etude","Section"))
+        path="data\data.xlsx"    
+        workbook=openpyxl.load_workbook(path)
+        sheet=workbook.active
+        list_value=list(sheet.values)
+        row_ind=0
+        print(list_value)
+        for vt in list_value[1:]:
+            col_ind=0
+            for v in vt:
+             
+
+                self.tableWidget.setItem(row_ind,col_ind,QTableWidgetItem(str(v)))
+                col_ind+=1                         
+            row_ind+=1                                                                
 if __name__=='__main__':
      app=QApplication(sys.argv)
      ui=MainUi()

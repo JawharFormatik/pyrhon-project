@@ -596,50 +596,25 @@ color: rgb(0, 170, 127);</string>
      <property name="title">
       <string>Mise a jour</string>
      </property>
-     <widget class="QMenu" name="menuModifier_Emprunt">
-      <property name="title">
-       <string>Modifier Emprunt</string>
-      </property>
-      <addaction name="actionDate_emprunt"/>
-      <addaction name="actionDate_Retour"/>
-     </widget>
      <addaction name="actionAjouter_un_nouvel_emprunt"/>
      <addaction name="actionRetour_d_un_emprunt"/>
      <addaction name="actionSupprimer_d_un_emprunt"/>
-     <addaction name="menuModifier_Emprunt"/>
+     <addaction name="actionModifier_emprunt"/>
     </widget>
     <widget class="QMenu" name="menuRecherche_Affichage">
      <property name="title">
       <string>Recherche ,Affichage</string>
      </property>
      <addaction name="actionContenu_du_dictionnaire_emprunt"/>
-     <addaction name="actionRecherche_emprunt_par_livre"/>
-     <addaction name="actionRecherche_emprunt_par_etudiant"/>
-     <addaction name="actionRecherche_livres_empruntee_a_une_date_donnee"/>
-     <addaction name="actionRecherche_livres_retournee_a_une_date_donne"/>
-     <addaction name="actionRecherche_livres_empruntee_entre_2_dates_donnee"/>
-     <addaction name="actionRecherche_livres_retournee_entre_2_date_donne"/>
+     <addaction name="actionRecherche_2"/>
     </widget>
     <addaction name="menuMise_a_jour_2"/>
     <addaction name="menuRecherche_Affichage"/>
-   </widget>
-   <widget class="QMenu" name="menuRecuperation">
-    <property name="title">
-     <string>Enregistrement Et Recuperation</string>
-    </property>
-    <addaction name="actionRecuperation_des_donnee"/>
-    <addaction name="actionEnregistrer_Ficher_Livres"/>
-    <addaction name="actionEnregistrer_Ficher_Emprunt"/>
-    <addaction name="separator"/>
-    <addaction name="actionRecuperer_Ficher_Etudiant"/>
-    <addaction name="actionRecuperer_Ficher_Livres"/>
-    <addaction name="actionRecuperer_Ficher_Emprunt"/>
    </widget>
    <addaction name="menuAcceuil"/>
    <addaction name="menuMenu_Etudiant"/>
    <addaction name="menuMenu_Gestion_Des_Livres"/>
    <addaction name="menuGestion_Emprunts"/>
-   <addaction name="menuRecuperation"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionAjouter_Etudiant">
@@ -787,7 +762,7 @@ color: rgb(0, 170, 127);</string>
   </action>
   <action name="actionContenu_du_dictionnaire_emprunt">
    <property name="text">
-    <string>Contenu du dictionnaire emprunt</string>
+    <string>Afficher les emprunts</string>
    </property>
   </action>
   <action name="actionRecherche_emprunt_par_livre">
@@ -878,6 +853,16 @@ color: rgb(0, 170, 127);</string>
   <action name="actionSupprimer">
    <property name="text">
     <string>Supprimer</string>
+   </property>
+  </action>
+  <action name="actionModifier_emprunt">
+   <property name="text">
+    <string>Modifier emprunt</string>
+   </property>
+  </action>
+  <action name="actionRecherche_2">
+   <property name="text">
+    <string>Recherche</string>
    </property>
   </action>
  </widget>
